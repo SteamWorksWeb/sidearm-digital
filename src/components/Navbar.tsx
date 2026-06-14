@@ -31,7 +31,7 @@ export default function Navbar() {
           : 'backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/50'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0 group">
           <Image
