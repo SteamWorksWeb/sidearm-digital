@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 
 const painPoints = [
-  'Your current site does not reflect the quality of your work.',
-  'Your visitors are not converting into high-value inquiries.',
-  'Your site is slow, dated, or difficult to manage.',
-  'Your brand looks less premium online than it does in person.',
-  'Your technical support disappears when you need them most.',
+  'Projects stall because there is no clear plan.',
+  'Communication gets vague after the sale.',
+  'Deadlines move without explanation.',
+  'Details fall through the cracks.',
+  'You are left managing the process instead of running your business.',
 ]
 
 const promises = [
@@ -35,10 +35,10 @@ export default function About() {
             transition={{ duration: 0.65, ease: 'easeOut' }}
           >
             <span className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-              The Standard Has Changed
+              The Problem
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-black text-white leading-tight">
-              Your Website Should Feel as Premium as the{' '}
+              Great Ideas Fail Without{' '}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
@@ -46,15 +46,18 @@ export default function About() {
                     'linear-gradient(135deg, #f87171 0%, #ef4444 50%, #dc2626 100%)',
                 }}
               >
-                Business Behind It.
+                Excellent Execution.
               </span>
             </h2>
 
             <p className="mt-6 text-zinc-400 text-lg leading-relaxed">
-              High-end clients notice the details. They notice when a site loads slowly, when the design feels dated, when the message is unclear, or when the experience does not match the quality of the service being offered.
+              Most companies do not lose momentum because the vision was wrong. They lose it because the execution was inconsistent, communication broke down, deadlines slipped, and no one truly owned the outcome.
             </p>
             <p className="mt-4 text-zinc-400 leading-relaxed">
-              A premium digital presence should communicate confidence before a conversation ever happens. It should feel fast, polished, intentional, and effortless.
+              Premium clients expect more. They expect clarity, responsiveness, precision, and a team that treats every detail like it matters.
+            </p>
+            <p className="mt-4 text-zinc-400 leading-relaxed">
+              When your digital partner is slow to respond, unclear in their process, or careless with the handoff, your business pays the price.
             </p>
 
             <ul className="mt-8 flex flex-col gap-3">
