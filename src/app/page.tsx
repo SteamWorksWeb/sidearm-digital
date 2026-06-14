@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
-import Arsenal from '@/components/Arsenal'
+import Process from '@/components/Process'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
 
@@ -13,7 +13,7 @@ export default function Home() {
       <div className="pt-16">
         <Hero />
         <Services />
-        <Arsenal />
+        <Process />
         <About />
         <Footer />
       </div>
