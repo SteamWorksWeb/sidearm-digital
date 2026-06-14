@@ -1,51 +1,51 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, ShieldCheck, RefreshCw, Code2, BarChart3, HeartHandshake } from 'lucide-react'
+import { Code2, Smartphone, Workflow, ServerCog, Palette, LineChart } from 'lucide-react'
 
 const services = [
   {
     icon: <Code2 size={28} className="text-blue-400" />,
-    title: 'Custom Web Applications',
+    title: 'Web Applications',
     description:
-      'Hand-coded, zero-template web apps built for speed and scale. No WordPress. No Webflow. Just pure, performant code that loads in under a second and converts.',
+      'Hand-coded, zero-template web apps built for speed and scale. No bloat. Just pure, performant code that loads instantly and converts.',
     tag: 'Performance-first',
   },
   {
-    icon: <ShieldCheck size={28} className="text-blue-400" />,
-    title: 'Zero-Maintenance Retainer',
+    icon: <Smartphone size={28} className="text-blue-400" />,
+    title: 'Mobile Applications',
     description:
-      'You run your business. We run your stack. Hosting, security patches, SSL, uptime monitoring, and feature updates — all handled by us, every month. You will never touch a backend again.',
+      'Seamless, high-performance mobile experiences designed to keep your users engaged and your business in their pockets.',
+    tag: 'Native-feel',
+  },
+  {
+    icon: <Workflow size={28} className="text-blue-400" />,
+    title: 'Automations',
+    description:
+      'We eliminate manual bottlenecks. Custom API integrations and automated workflows so your team can focus on scaling, not data entry.',
+    tag: 'Efficiency',
+  },
+  {
+    icon: <ServerCog size={28} className="text-blue-400" />,
+    title: 'Project Hosting & Management',
+    description:
+      'The Zero-Maintenance Retainer. You run your business. We run your stack. Hosting, security, and feature updates — handled. You will never touch a backend again.',
     tag: '★ Most Popular',
     featured: true,
   },
   {
-    icon: <BarChart3 size={28} className="text-blue-400" />,
-    title: 'Conversion Rate Optimization',
+    icon: <Palette size={28} className="text-blue-400" />,
+    title: 'Web Design',
     description:
-      'A fast site that doesn\'t convert is just expensive infrastructure. We audit your funnel, run A/B tests, and engineer landing pages that turn visitors into paying clients.',
-    tag: 'Revenue-focused',
+      'Aesthetically premium, revenue-driven UI/UX. We design digital experiences that build trust and seamlessly guide your visitors to the checkout.',
+    tag: 'Conversion-focused',
   },
   {
-    icon: <Zap size={28} className="text-blue-400" />,
-    title: 'Core Web Vitals Rescue',
+    icon: <LineChart size={28} className="text-blue-400" />,
+    title: 'Consulting',
     description:
-      'Stuck with a bloated site killing your Google rankings? We diagnose and rebuild your performance layer — LCP, CLS, FID — to get you back in the game fast.',
-    tag: 'SEO impact',
-  },
-  {
-    icon: <RefreshCw size={28} className="text-blue-400" />,
-    title: 'Site Migrations & Rebuilds',
-    description:
-      'Escape template hell. We migrate your content from any platform and rebuild your site from scratch — faster, cleaner, and fully yours. No vendor lock-in. Ever.',
-    tag: 'Clean slate',
-  },
-  {
-    icon: <HeartHandshake size={28} className="text-blue-400" />,
-    title: 'Growth Partnerships',
-    description:
-      'For founders ready to scale. We embed alongside your team as your dedicated web partner — strategy, design, development, and shipping, all in one relationship.',
-    tag: 'Long-term',
+      'High-level technical architecture and strategy. We align your digital infrastructure with your business goals to ensure you are ready to scale without friction.',
+    tag: 'Strategy',
   },
 ]
 
