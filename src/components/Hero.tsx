@@ -104,7 +104,7 @@ export default function Hero() {
             href="#arsenal"
             className="px-8 py-3.5 rounded-md text-sm font-bold text-zinc-300 border border-zinc-700 hover:border-blue-500/60 hover:text-white transition-all duration-200"
           >
-            View Arsenal
+            Our Process
           </Link>
         </motion.div>
 
