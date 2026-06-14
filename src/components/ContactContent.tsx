@@ -34,23 +34,23 @@ const fadeRight: Variants = {
 const trust = [
   {
     icon: Flag,
-    title: '100% U.S. Based Engineering',
-    body: 'Every engineer on your build is domestic. No offshore handoffs, no timezone friction, no language barriers.',
+    title: 'U.S.-Based Engineering',
+    body: 'Your project is handled by a domestic team with clear communication, aligned working hours, and direct accountability. No offshore handoffs.',
   },
   {
     icon: ShieldCheck,
-    title: 'Zero-Maintenance Retainer',
-    body: 'We host, secure, and maintain your codebase post-launch. You focus on revenue. We run the stack.',
+    title: 'Premium Managed Support',
+    body: 'We continue hosting, securing, monitoring, and improving your digital infrastructure after launch, so you are never left managing the technical burden alone.',
   },
   {
     icon: Zap,
-    title: 'Performance-Obsessed',
-    body: 'We target sub-1-second load times and 95+ Lighthouse scores across every page we ship.',
+    title: 'Performance-First Builds',
+    body: 'Every project is designed with speed, usability, stability, and conversion in mind from the very beginning.',
   },
   {
     icon: Clock,
-    title: 'Response Within 24 Hours',
-    body: 'Our lead architect reviews every submission personally. You will hear from a senior engineer, not a sales rep.',
+    title: 'Personal Response',
+    body: 'Your submission is reviewed by a senior member of our team. No call-center handoff. No generic sales script. Just a thoughtful response.',
   },
 ]
 
@@ -86,10 +86,10 @@ export default function ContactContent() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-blue-400 uppercase mb-5">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-            Scope Your Build
+            Start the Conversation
           </span>
           <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-black leading-[1.05] tracking-tight text-white max-w-3xl">
-            Let&apos;s Build Something{' '}
+            Let&apos;s Build a Digital Presence{' '}
             <span
               className="bg-clip-text text-transparent"
               style={{
@@ -97,7 +97,7 @@ export default function ContactContent() {
                   'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
               }}
             >
-              Lethal.
+              Worthy of Your Brand.
             </span>
           </h1>
         </motion.div>
@@ -114,17 +114,10 @@ export default function ContactContent() {
           >
             <div className="flex flex-col gap-5 text-zinc-400 text-lg leading-relaxed">
               <p>
-                We do not take on every project. We partner with founders and
-                brands who are ready to scale with zero technical friction — and
-                who understand that a hand-coded, performance-obsessed
-                architecture is a{' '}
-                <span className="text-zinc-200 font-semibold">
-                  revenue decision, not a design preference.
-                </span>
+                We partner with businesses that value excellence, performance, and a polished client experience. If you are ready to elevate your website, application, automation, or digital infrastructure, share a few details below.
               </p>
               <p>
-                Fill out the scope below. If we are a fit, our lead architect
-                will reach out directly within one business day.
+                If the project is a fit, our team will respond personally.
               </p>
             </div>
 
@@ -156,10 +149,10 @@ export default function ContactContent() {
             {/* Social proof strip */}
             <div className="border-t border-zinc-800/60 pt-6 flex flex-col gap-1">
               <p className="text-xs font-bold tracking-widest text-zinc-600 uppercase">
-                Built for
+                Built For
               </p>
               <p className="text-sm text-zinc-500">
-                SaaS founders · E-commerce operators · Professional service firms · Early-stage startups ready to scale
+                Premium service businesses · SaaS founders · E-commerce brands · Professional firms · Private practices · Luxury operators · Growth-stage companies
               </p>
             </div>
           </motion.div>
@@ -174,11 +167,10 @@ export default function ContactContent() {
           >
             <div className="mb-7">
               <h2 className="text-xl font-black text-white">
-                Project Scope
+                Project Inquiry
               </h2>
               <p className="text-sm text-zinc-500 mt-1">
-                All fields marked <span className="text-blue-400">*</span> are
-                required.
+                Tell us what you are looking to build, improve, or streamline. All fields marked <span className="text-blue-400">*</span> are required.
               </p>
             </div>
             <ContactForm />

@@ -44,7 +44,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-blue-400 uppercase"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-          High-Performance Digital Agency
+          Premium Digital Engineering for Ambitious Brands
         </motion.span>
 
         {/* Headline */}
@@ -55,7 +55,7 @@ export default function Hero() {
           custom={0.1}
           className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white"
         >
-          Precision{' '}
+          Exquisite Web Applications.{' '}
           <span
             className="bg-clip-text text-transparent"
             style={{
@@ -65,8 +65,9 @@ export default function Hero() {
           >
             Engineered
           </span>
+          {' '}for Performance.
           <br />
-          Web Applications.
+          Built for Brands That Refuse Ordinary.
         </motion.h1>
 
         {/* Subheadline */}
@@ -77,10 +78,7 @@ export default function Hero() {
           custom={0.2}
           className="max-w-2xl text-lg sm:text-xl text-zinc-400 leading-relaxed"
         >
-          We build high-caliber, lightning-fast digital solutions that hit the
-          mark.{' '}
-          <span className="text-zinc-300 font-medium">No boilerplate.</span>{' '}
-          Just pure performance.
+           Sidearm Digital creates custom-coded websites, applications, automations, and digital infrastructure for businesses that expect excellence at every touchpoint. No templates. No shortcuts. No disposable builds. Just refined digital systems designed to perform beautifully, load instantly, and support serious growth.
         </motion.p>
 
         {/* CTAs */}
@@ -96,15 +94,15 @@ export default function Hero() {
             href="/start"
             className="group relative px-8 py-3.5 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40 overflow-hidden"
           >
-            <span className="relative z-10">Get Started →</span>
+            <span className="relative z-10">Start a Private Consultation &rarr;</span>
           </Link>
 
           <Link
             id="hero-cta-secondary"
-            href="#arsenal"
+            href="/process"
             className="px-8 py-3.5 rounded-md text-sm font-bold text-zinc-300 border border-zinc-700 hover:border-blue-500/60 hover:text-white transition-all duration-200"
           >
-            Our Process
+            View Our Process
           </Link>
         </motion.div>
 
@@ -116,7 +114,7 @@ export default function Hero() {
           custom={0.4}
           className="mt-4 text-xs text-zinc-600 tracking-widest uppercase"
         >
-          Built for founders who refuse to settle
+           Built for founders, operators, and premium brands that demand speed, polish, and reliability.
         </motion.p>
       </div>
 

@@ -8,8 +8,8 @@ import { Menu, X } from 'lucide-react'
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Our Services', href: '/services' },
-  { label: 'Our Process', href: '/process' },
+  { label: 'Services', href: '/services' },
+  { label: 'Process', href: '/process' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -61,7 +61,7 @@ export default function Navbar() {
               href="/start"
               className="ml-2 px-4 py-2 rounded-md text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors duration-200 shadow-md shadow-blue-900/30"
             >
-              Get Started
+              Start a Private Consultation
             </Link>
           </li>
         </ul>
@@ -101,7 +101,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="block w-full text-center mt-1 px-4 py-2 rounded-md text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors duration-200"
             >
-              Get Started
+              Start a Private Consultation
             </Link>
           </li>
         </ul>

@@ -17,56 +17,56 @@ const steps = [
     title: 'Discovery',
     icon: Search,
     description:
-      'We audit your existing infrastructure and pinpoint exactly where bloated code is costing you leads.',
-    detail: 'Tech stack analysis · Competitor benchmarking · Conversion audit',
+      'We begin by understanding your business, your audience, your current digital presence, and the expectations of the clients you want to attract.',
+    detail: 'Technical review · Competitor analysis · Customer journey review',
   },
   {
     number: '02',
     title: 'Strategy',
     icon: Map,
     description:
-      'We architect a custom digital roadmap focused purely on speed, security, and aggressive conversion rates.',
-    detail: 'Architecture design · KPI definition · Risk assessment',
+      'We define the digital roadmap, technical architecture, and conversion strategy before design or development begins. Every decision is aligned with your brand and your growth goals.',
+    detail: 'Architecture planning · KPI definition · Growth strategy',
   },
   {
     number: '03',
     title: 'Planning',
     icon: ClipboardList,
     description:
-      'We define the exact technical stack and deliverables. Zero guesswork, zero scope creep.',
-    detail: 'Sprint planning · Milestone mapping · Stakeholder alignment',
+      'We establish the scope, milestones, deliverables, and technical requirements upfront. You know exactly what is being built, how it will function, and what the path to launch looks like.',
+    detail: 'Milestone mapping · Sprint planning · Stakeholder alignment',
   },
   {
     number: '04',
     title: 'Development',
     icon: Code2,
     description:
-      'We hand-code your application from the ground up in Next.js. No rigid templates, no fragile plugins.',
-    detail: 'Next.js · TypeScript · Tailwind CSS · Custom APIs',
+      'Your project is custom-coded with clean architecture and performance at the center. No fragile templates. No bloated plugins. Just elegant, scalable engineering.',
+    detail: 'Next.js · TypeScript · Custom APIs · Performance-first architecture',
   },
   {
     number: '05',
     title: 'Testing',
     icon: FlaskConical,
     description:
-      'Rigorous Lighthouse auditing and UX validation. We do not ship until the performance metrics are flawless.',
-    detail: 'Core Web Vitals · Cross-browser QA · Accessibility audit',
+      'Before launch, we carefully test performance, usability, accessibility, browser compatibility, and the full client journey. We do not treat quality assurance as an afterthought.',
+    detail: 'Core Web Vitals · Cross-browser QA · Accessibility review',
   },
   {
     number: '06',
-    title: 'Execution',
+    title: 'Launch',
     icon: Rocket,
     description:
-      "A seamless, zero-downtime deployment to Vercel's global edge network.",
-    detail: 'CI/CD pipeline · Canary deployment · DNS & SSL provisioning',
+      'We manage deployment with precision, ensuring a smooth transition with minimal disruption. DNS, SSL, hosting, redirects, and launch monitoring are all handled by our team.',
+    detail: 'Deployment · DNS & SSL · Monitoring · Launch support',
   },
   {
     number: '07',
-    title: 'Management & Support',
+    title: 'Ongoing Management',
     icon: ShieldCheck,
     description:
-      'The Zero-Maintenance Retainer. You focus on scaling your business — we handle hosting, security patches, and code updates, every single month without exception.',
-    detail: 'Uptime monitoring · Security patches · Feature updates · Priority support',
+      'After launch, we continue managing the technical foundation. Hosting, updates, security, monitoring, and ongoing improvements are handled through a long-term support relationship. You run the business. We protect the digital foundation behind it.',
+    detail: 'Hosting · Security · Updates · Monitoring · Priority support',
     featured: true,
   },
 ]
@@ -106,10 +106,10 @@ export default function Process() {
           >
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-400 uppercase">
               <span className="h-px w-6 bg-blue-400/60" />
-              The Process
+              Our Approach
             </span>
             <h2 className="mt-4 text-5xl sm:text-6xl font-black text-white leading-[1.05] tracking-tight">
-              How We{' '}
+              A Refined Process.{' '}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
@@ -117,7 +117,7 @@ export default function Process() {
                     'linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%)',
                 }}
               >
-                Do It
+                A More Predictable Result.
               </span>
             </h2>
           </motion.div>
@@ -130,8 +130,7 @@ export default function Process() {
             className="flex flex-col justify-end gap-4"
           >
             <p className="text-zinc-400 text-lg leading-relaxed">
-              A systematic, engineering-led approach to building digital assets
-              that actually perform. Seven steps. Zero shortcuts.
+              Premium work requires discipline. Our process is structured, transparent, and deeply intentional, giving you clarity at every stage.
             </p>
             <div className="flex items-center gap-6">
               <div className="text-center">
@@ -239,11 +238,11 @@ export default function Process() {
 
                           <div className="lg:shrink-0">
                             <div className="inline-flex flex-col items-center gap-1 rounded-xl border border-blue-500/30 bg-blue-600/10 px-6 py-4 text-center">
-                              <span className="text-xs font-bold tracking-widest text-blue-400 uppercase">
-                                Zero-Maintenance
+                               <span className="text-xs font-bold tracking-widest text-blue-400 uppercase">
+                                Ongoing
                               </span>
                               <span className="text-xs font-bold tracking-widest text-blue-400 uppercase">
-                                Retainer
+                                Management & Care
                               </span>
                             </div>
                           </div>

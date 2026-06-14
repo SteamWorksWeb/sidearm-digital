@@ -4,19 +4,19 @@ import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 
 const painPoints = [
-  'Your current site takes 8+ seconds to load on mobile',
-  'You\'re paying a "web guy" monthly just to keep the lights on',
-  'Your template breaks every time you update a plugin',
-  'Leads bounce before they even see your offer',
-  'Your developer disappeared after the last invoice',
+  'Your current site does not reflect the quality of your work.',
+  'Your visitors are not converting into high-value inquiries.',
+  'Your site is slow, dated, or difficult to manage.',
+  'Your brand looks less premium online than it does in person.',
+  'Your technical support disappears when you need them most.',
 ]
 
 const promises = [
-  'Sub-1-second load times, guaranteed',
-  'We own the stack — hosting, security, updates, forever',
-  'Zero templates, zero plugins, zero single points of failure',
-  'Every component built to convert, not just to look good',
-  'One direct line to the team that built your site',
+  'Custom-coded architecture built for speed and scalability.',
+  'Premium design focused on credibility and conversion.',
+  'Fully managed hosting, updates, security, and monitoring.',
+  'Direct access to the team responsible for your build.',
+  'A refined process built around clarity, communication, and care.',
 ]
 
 export default function About() {
@@ -35,10 +35,10 @@ export default function About() {
             transition={{ duration: 0.65, ease: 'easeOut' }}
           >
             <span className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-              The Problem
+              The Standard Has Changed
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-black text-white leading-tight">
-              Stop Losing Leads to{' '}
+              Your Website Should Feel as Premium as the{' '}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
@@ -46,19 +46,15 @@ export default function About() {
                     'linear-gradient(135deg, #f87171 0%, #ef4444 50%, #dc2626 100%)',
                 }}
               >
-                Slow, Bloated
-              </span>{' '}
-              Websites.
+                Business Behind It.
+              </span>
             </h2>
 
             <p className="mt-6 text-zinc-400 text-lg leading-relaxed">
-              Most agencies hand you a WordPress theme and call it a day. Then
-              comes the plugin roulette, the mystery maintenance fees, and the
-              3-second load times that kill your Google ranking.
+              High-end clients notice the details. They notice when a site loads slowly, when the design feels dated, when the message is unclear, or when the experience does not match the quality of the service being offered.
             </p>
             <p className="mt-4 text-zinc-400 leading-relaxed">
-              Every second your site takes to load costs you money. Google ranks
-              speed. Customers feel it. Competitors exploit it.
+              A premium digital presence should communicate confidence before a conversation ever happens. It should feel fast, polished, intentional, and effortless.
             </p>
 
             <ul className="mt-8 flex flex-col gap-3">
@@ -83,21 +79,14 @@ export default function About() {
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm p-8 lg:p-10">
               <div className="mb-6">
                 <span className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-                  The Sidearm Way
+                  The Sidearm Standard
                 </span>
                 <h3 className="mt-2 text-2xl font-bold text-white">
                   Custom-Coded. Fully Managed.{' '}
-                  <span className="text-blue-400">Always Yours.</span>
+                  <span className="text-blue-400">Built to Impress.</span>
                 </h3>
                 <p className="mt-3 text-zinc-400 text-sm leading-relaxed">
-                  We write every line by hand. No themes. No drag-and-drop. No
-                  excuses. And once it's built, our Zero-Maintenance Retainer
-                  means you{' '}
-                  <strong className="text-zinc-200 font-semibold">
-                    never touch a backend again
-                  </strong>
-                  . We handle hosting, security, updates, and monitoring —
-                  every single month.
+                  We create digital assets that are engineered with care and managed with accountability. Every line of code, every design decision, and every client interaction is handled with the expectation that excellence is the baseline.
                 </p>
               </div>
 
@@ -116,12 +105,12 @@ export default function About() {
               {/* CTA nudge */}
               <div className="mt-8 pt-6 border-t border-zinc-800">
                 <p className="text-sm text-zinc-500">
-                  Ready to fire your current setup?{' '}
+                  Ready for a more refined digital foundation?{' '}
                   <a
-                    href="#comms"
+                    href="/start"
                     className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-150"
                   >
-                    Let's talk. →
+                    Start a Private Consultation &rarr;
                   </a>
                 </p>
               </div>

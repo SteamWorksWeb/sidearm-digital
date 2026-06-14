@@ -80,10 +80,8 @@ export default function ContactForm() {
           <h3 className="text-2xl font-black text-white leading-tight mb-3">
             We&apos;ve got your scope.
           </h3>
-          <p className="text-zinc-400 leading-relaxed max-w-sm">
-            Our engineering team will review your project and initiate
-            contact shortly. Expect to hear from our lead architect
-            within one business day.
+          <p className="text-zinc-300 leading-relaxed max-w-sm">
+            Your submission has been received. A senior member of our team will review your inquiry and respond personally — no call-center handoff, no generic sales script.
           </p>
         </div>
       </div>
@@ -202,14 +200,13 @@ export default function ContactForm() {
         ) : (
           <>
             <Send size={15} />
-            Initiate Project
+            Submit Project Inquiry
           </>
         )}
       </button>
 
       <p className="text-center text-xs text-zinc-700">
-        No spam. No discovery call runaround. Just a direct response from our
-        lead architect.
+        No spam. No pressure. No generic discovery call. Just a direct, thoughtful response from our team.
       </p>
     </form>
   )

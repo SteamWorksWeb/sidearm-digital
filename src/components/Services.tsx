@@ -6,46 +6,46 @@ import { Code2, Smartphone, Workflow, ServerCog, Palette, LineChart } from 'luci
 const services = [
   {
     icon: <Code2 size={28} className="text-blue-400" />,
-    title: 'Web Applications',
+    title: 'Custom Web Applications',
     description:
-      'Hand-coded, zero-template web apps built for speed and scale. No bloat. Just pure, performant code that loads instantly and converts.',
-    tag: 'Performance-first',
+      'Hand-coded, high-performance web applications built for speed, elegance, and scalability. Every page, interaction, and component is designed to create trust, reduce friction, and convert high-value visitors into serious inquiries.',
+    tag: 'Performance-First',
   },
   {
     icon: <Smartphone size={28} className="text-blue-400" />,
     title: 'Mobile Applications',
     description:
-      'Seamless, high-performance mobile experiences designed to keep your users engaged and your business in their pockets.',
-    tag: 'Native-feel',
+      'Premium mobile experiences that feel intuitive, polished, and effortless. We create fast, responsive mobile applications that keep your brand close to your customers and make every interaction feel refined.',
+    tag: 'Seamless Experience',
   },
   {
     icon: <Workflow size={28} className="text-blue-400" />,
-    title: 'Automations',
+    title: 'Custom Automations',
     description:
-      'We eliminate manual bottlenecks. Custom API integrations and automated workflows so your team can focus on scaling, not data entry.',
-    tag: 'Efficiency',
+      'We eliminate the repetitive, manual tasks that quietly drain your team time and attention. From client onboarding to CRM workflows, we build automations that allow your team to operate with more precision and less friction.',
+    tag: 'Operational Excellence',
   },
   {
     icon: <ServerCog size={28} className="text-blue-400" />,
-    title: 'Project Hosting & Management',
+    title: 'Hosting, Management & Ongoing Care',
     description:
-      'The Zero-Maintenance Retainer. You run your business. We run your stack. Hosting, security, and feature updates — handled. You will never touch a backend again.',
-    tag: '★ Most Popular',
+      'A premium website should never become a technical burden. We host, secure, monitor, update, and maintain your digital infrastructure so you can stay focused on your clients, your team, and your growth.',
+    tag: '★ White-Glove Support',
     featured: true,
   },
   {
     icon: <Palette size={28} className="text-blue-400" />,
-    title: 'Web Design',
+    title: 'Premium Web Design',
     description:
-      'Aesthetically premium, revenue-driven UI/UX. We design digital experiences that build trust and seamlessly guide your visitors to the checkout.',
-    tag: 'Conversion-focused',
+      'High-end design is not decoration. It is a trust-building system. We create refined digital experiences that communicate credibility, guide visitors clearly, and position your brand as the obvious choice for discerning clients.',
+    tag: 'Conversion & Trust',
   },
   {
     icon: <LineChart size={28} className="text-blue-400" />,
-    title: 'Consulting',
+    title: 'Digital Strategy & Technical Consulting',
     description:
-      'High-level technical architecture and strategy. We align your digital infrastructure with your business goals to ensure you are ready to scale without friction.',
-    tag: 'Strategy',
+      'For businesses preparing to scale, rebuild, or make significant digital decisions, we provide clear technical direction. We help you align your digital infrastructure with your business goals.',
+    tag: 'Strategic Guidance',
   },
 ]
 
@@ -65,14 +65,13 @@ export default function Services() {
           className="mb-16 max-w-2xl"
         >
           <span className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-            What We Do
+            What We Build
           </span>
           <h2 className="mt-3 text-4xl sm:text-5xl font-black text-white leading-tight">
-            Our Services
+            Digital Infrastructure Designed for a Higher Standard.
           </h2>
           <p className="mt-4 text-zinc-400 text-lg leading-relaxed">
-            Every engagement is custom-scoped. No packages. No upsells. Just
-            the exact solution your business needs.
+            Every engagement is carefully scoped around your business, your customer experience, and your long-term growth. We do not sell generic packages or recycled templates. We design and engineer the exact digital asset your brand needs to look exceptional, perform flawlessly, and serve your clients with confidence.
           </p>
         </motion.div>
 

@@ -25,41 +25,41 @@ const fadeLeft: Variants = {
 
 /* ─── data ─── */
 const stats = [
-  { value: '40+', label: 'Years combined experience' },
-  { value: '100%', label: 'U.S.-based team' },
-  { value: '0', label: 'Templates ever used' },
-  { value: '<1s', label: 'Avg. load time delivered' },
+  { value: '40+', label: 'Years of Combined Technical Experience' },
+  { value: '100%', label: 'U.S.-Based Team' },
+  { value: '0', label: 'Templates Used' },
+  { value: '<1s', label: 'Performance-First Load Time Target' },
 ]
 
 const pillars = [
   {
     icon: Flag,
-    title: 'U.S. Engineering.',
+    title: 'U.S.-Based Engineering.',
     description:
-      'Every engineer on our team is based in the United States. That means elite technical ability, real-time communication, zero language barriers, and perfectly aligned time zones. Your build never gets handed off to an overseas seat farm.',
-    tag: 'Domestic · Elite',
+      'Every project is handled by a U.S.-based team with direct communication, aligned working hours, and full accountability. Your build is never passed through layers of anonymous offshore handoffs. You work with the people responsible for the outcome.',
+    tag: 'Domestic · Direct',
   },
   {
     icon: Layers,
-    title: 'Zero-CMS Philosophy.',
+    title: 'Custom-Coded Performance.',
     description:
-      'We spent decades in the trenches with WordPress, Shopify, and enterprise legacy stacks. We know exactly where the bodies are buried. That experience is why we build everything custom — bypassing the plugin roulette and database bloat that is silently throttling your conversions.',
+      'We build with clean, scalable architecture instead of relying on templates, bloated plugins, or fragile page-builder systems. The result is a faster, more stable, more flexible digital asset that can grow with your business.',
     tag: 'Custom · Performance',
   },
   {
     icon: ShieldCheck,
-    title: 'The Retainer Model.',
+    title: 'Long-Term Care.',
     description:
-      'We build it. We host it. We manage it. The Zero-Maintenance Retainer means you hand the backend over to us permanently. Hosting, security patches, SSL, uptime monitoring, and feature updates — handled every month while you focus on scaling your revenue.',
-    tag: 'Managed · Retained',
+      'A premium website should be actively protected and maintained. Through our ongoing management model, we handle hosting, updates, security, monitoring, and refinements so your digital presence continues to perform after launch.',
+    tag: 'Managed · Supported',
   },
 ]
 
 const evolution = [
-  { year: 'Early days', label: 'WordPress & Shopify', note: 'Mastered the platforms that power the web' },
-  { year: 'Mid career', label: 'Enterprise CMS stacks', note: 'Learned exactly where legacy systems fail at scale' },
-  { year: 'The shift', label: 'Custom Next.js architecture', note: 'Abandoned templates entirely for hand-coded performance' },
-  { year: 'Today', label: 'The Zero-Maintenance Retainer', note: 'We build it, host it, manage it — while you scale' },
+  { year: 'Early Foundation', label: 'WordPress & Shopify & Foundational Web Platforms', note: 'We mastered the systems that shaped the modern web and learned where they succeed and where they limit serious growth.' },
+  { year: 'Enterprise Experience', label: 'Complex CMS & Scaled Digital Systems', note: 'We developed the discipline required to support larger systems, more demanding use cases, and higher expectations.' },
+  { year: 'The Shift', label: 'Custom-Coded Architecture', note: 'We moved beyond template-based limitations and committed to clean, hand-coded digital builds designed for performance and longevity.' },
+  { year: 'Today', label: 'Premium Managed Digital Infrastructure', note: 'We build, host, secure, maintain, and improve digital systems for clients who want excellence without technical burden.' },
 ]
 
 /* ─── component ─── */
@@ -98,7 +98,7 @@ export default function AboutContent() {
               className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-blue-400 uppercase mb-6"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-              The Team Behind the Stack
+              The Team Behind the Standard
             </motion.span>
 
             <motion.h1
@@ -108,7 +108,7 @@ export default function AboutContent() {
               custom={0.1}
               className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white"
             >
-              40 Years of Combined{' '}
+              Experienced Engineers. Refined Process.{' '}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
@@ -116,10 +116,8 @@ export default function AboutContent() {
                     'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
                 }}
               >
-                Engineering.
+                Exceptional Digital Outcomes.
               </span>
-              <br />
-              100% U.S. Based.
             </motion.h1>
 
             <motion.p
@@ -129,8 +127,7 @@ export default function AboutContent() {
               custom={0.2}
               className="mt-6 text-xl text-zinc-400 leading-relaxed max-w-2xl"
             >
-              We didn&apos;t just learn the web. We lived it. Now, we&apos;re
-              rebuilding it for speed.
+              Sidearm Digital was built for businesses that want more than a website. We partner with founders, operators, and premium brands that need a digital presence capable of matching the quality of their service, the expectations of their clients, and the ambition of their growth.
             </motion.p>
 
             <motion.div
@@ -141,10 +138,10 @@ export default function AboutContent() {
               className="mt-8"
             >
               <Link
-                href="/#comms"
+                href="/start"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40"
               >
-                Start a Project <ArrowRight size={15} />
+                Start a Private Consultation <ArrowRight size={15} />
               </Link>
             </motion.div>
           </div>
@@ -186,10 +183,10 @@ export default function AboutContent() {
             className="lg:sticky lg:top-32"
           >
             <span className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-              Our Story
+              Our Perspective
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-black text-white leading-tight">
-              We Know The{' '}
+              We Know Exactly Where{' '}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
@@ -197,14 +194,12 @@ export default function AboutContent() {
                     'linear-gradient(135deg, #f87171 0%, #ef4444 100%)',
                 }}
               >
-                Old Way
+                Ordinary Websites
               </span>{' '}
-              Is Broken.
+              Fall Short.
             </h2>
             <p className="mt-4 text-zinc-500 text-sm leading-relaxed max-w-sm">
-              That&apos;s not criticism. That&apos;s authority. You can&apos;t
-              engineer something better until you&apos;ve fully understood what
-              it got wrong.
+              Our team has spent decades working across WordPress, Shopify, enterprise CMS systems, application development, and custom digital infrastructure. We have seen what works, what breaks, what slows businesses down, and what quietly costs brands trust.
             </p>
 
             {/* Evolution timeline */}
@@ -244,12 +239,7 @@ export default function AboutContent() {
             className="flex flex-col gap-8 text-zinc-400 text-lg leading-relaxed"
           >
             <p>
-              We&apos;ve spent decades mastering the platforms that power the
-              internet — App Development, WordPress, Shopify, and enterprise
-              legacy stacks. We know exactly how they work.{' '}
-              <span className="text-zinc-200 font-semibold">
-                And more importantly, we know exactly where they fail.
-              </span>
+              We do not build disposable websites. We build refined digital systems with clean architecture, premium design, and long-term maintainability in mind. Every project is created to serve your business now and support where you are going next.
             </p>
 
             {/* Pull quote */}
@@ -261,37 +251,20 @@ export default function AboutContent() {
                 &ldquo;
               </div>
               <p className="text-zinc-300 text-xl leading-relaxed font-medium italic">
-                Bloated plugins, fragile databases, and slow load times kill
-                your conversion rates. That&apos;s why Sidearm Digital shifted
-                entirely to custom-coded, performance-obsessed Next.js
-                architectures.
+                A premium business deserves a digital presence that feels intentional, performs instantly, and reflects the quality of the brand behind it.
               </p>
             </blockquote>
 
             <p>
-              We leverage our history to give you an unfair advantage today.{' '}
-              <span className="text-zinc-200 font-semibold">
-                No offshore handoffs. No templates. Just pure, scalable
-                engineering.
-              </span>{' '}
-              Every line of code written in-house, in the United States, by
-              engineers who have already seen every failure mode the modern web
-              has to offer.
-            </p>
-
-            <p>
-              When you work with Sidearm, you are not buying a product. You are
-              gaining a technical partner with four decades of institutional
-              knowledge, focused entirely on one outcome: a digital asset that
-              performs, converts, and never breaks.
+              When you work with Sidearm Digital, you are not purchasing a one-time deliverable. You are gaining a technical partner invested in the performance, presentation, and reliability of your digital presence.
             </p>
 
             <div className="pt-4">
               <Link
-                href="/#comms"
+                href="/process"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors duration-150"
               >
-                See how we work → Our Process <ArrowRight size={14} />
+                View Our Process <ArrowRight size={14} />
               </Link>
             </div>
           </motion.div>
@@ -310,10 +283,10 @@ export default function AboutContent() {
             className="mb-16 max-w-2xl"
           >
             <span className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-              Why It Matters
+              Our Principles
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-black text-white leading-tight">
-              Three Principles. Zero Compromise.
+              Three Commitments. No Compromise.
             </h2>
           </motion.div>
 
