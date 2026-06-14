@@ -120,17 +120,8 @@ export default function About() {
             </div>
 
             {/* Floating stat */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.35 }}
-              className="absolute -bottom-6 -right-4 lg:-right-8 rounded-xl border border-blue-500/30 bg-blue-600/10 backdrop-blur-md px-5 py-3 shadow-xl"
-            >
-              <p className="text-2xl font-black text-white">{'<1s'}</p>
-              <p className="text-xs text-zinc-400 mt-0.5">Avg. load time</p>
-            </motion.div>
           </motion.div>
+
         </div>
       </div>
     </section>
