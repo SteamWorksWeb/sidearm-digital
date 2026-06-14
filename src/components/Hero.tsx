@@ -93,10 +93,10 @@ export default function Hero() {
         >
           <Link
             id="hero-cta-primary"
-            href="#comms"
+            href="/start"
             className="group relative px-8 py-3.5 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40 overflow-hidden"
           >
-            <span className="relative z-10">Initiate Project →</span>
+            <span className="relative z-10">Get Started →</span>
           </Link>
 
           <Link
