@@ -25,9 +25,9 @@ export default function Footer() {
             <Image
               src="/sidearmLogo.png"
               alt="Sidearm Digital"
-              width={110}
-              height={32}
-              className="h-7 w-auto brightness-0 invert"
+              width={220}
+              height={64}
+              className="h-14 w-auto brightness-0 invert"
             />
           </Link>
           <p className="text-xs text-zinc-600 max-w-xs text-center sm:text-left leading-relaxed">

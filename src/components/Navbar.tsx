@@ -37,10 +37,10 @@ export default function Navbar() {
           <Image
             src="/sidearmLogo.png"
             alt="Sidearm Digital"
-            width={140}
-            height={40}
+            width={280}
+            height={80}
             priority
-            className="h-8 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+            className="h-16 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
           />
         </Link>
 
