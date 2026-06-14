@@ -187,11 +187,6 @@ export default function Process() {
                   {/* Featured step — full-width special treatment */}
                   {step.featured ? (
                     <div className="lg:col-span-2 relative">
-                      {/* Center dot on spine */}
-                      <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-12 w-12 rounded-full border-2 border-blue-400 bg-zinc-950 items-center justify-center shadow-lg shadow-blue-900/50">
-                        <ShieldCheck size={20} className="text-blue-400" />
-                      </div>
-
                       <div className="relative rounded-2xl border border-blue-500/40 bg-gradient-to-br from-blue-950/40 via-zinc-900/60 to-zinc-950 p-8 lg:p-12 overflow-hidden">
                         {/* Large decorative number */}
                         <div
