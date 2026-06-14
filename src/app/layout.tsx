@@ -13,8 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sidearmdigital.com"),
   title: "Sidearm Digital | High-Performance Web Applications",
-  description: "Premium, lightning-fast web applications and marketing sites.",
+  description:
+    "Premium, lightning-fast web applications and marketing sites. Custom-coded. Zero templates. Fully managed.",
+  openGraph: {
+    title: "Sidearm Digital | High-Performance Web Applications",
+    description:
+      "We build high-caliber, lightning-fast digital solutions that hit the mark. No boilerplate. Just pure performance.",
+    url: "https://sidearmdigital.com",
+    siteName: "Sidearm Digital",
+    images: [
+      {
+        url: "/sidearmLogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Sidearm Digital — High-Performance Web Applications",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sidearm Digital | High-Performance Web Applications",
+    description:
+      "We build high-caliber, lightning-fast digital solutions that hit the mark. No boilerplate. Just pure performance.",
+    images: ["/sidearmLogo.png"],
+  },
 };
 
 export default function RootLayout({
