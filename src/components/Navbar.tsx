@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Our Services', href: '/services' },
   { label: 'Our Process', href: '/process' },
-  { label: 'Contact', href: '#comms' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
@@ -58,7 +58,7 @@ export default function Navbar() {
           ))}
           <li>
             <Link
-              href="#comms"
+              href="/contact"
               className="ml-2 px-4 py-2 rounded-md text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors duration-200 shadow-md shadow-blue-900/30"
             >
               Start Project
@@ -97,7 +97,7 @@ export default function Navbar() {
           ))}
           <li>
             <Link
-              href="#comms"
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center mt-1 px-4 py-2 rounded-md text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors duration-200"
             >
