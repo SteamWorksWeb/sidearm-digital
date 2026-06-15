@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -47,6 +48,8 @@ const timelines = [
 export default function ProjectRequestForm() {
   const [form, setForm] = useState<FormData>(initial)
   const [status, setStatus] = useState<SubmitStatus>('idle')
+  const [errorMsg, setErrorMsg] = useState<string>('')
+  const { executeRecaptcha } = useGoogleReCaptcha()
 
   function handleChange(
     e: React.ChangeEvent<
@@ -56,17 +59,30 @@ export default function ProjectRequestForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setStatus('submitting')
-    try {
-      /* ── Phase 4: replace with real API call ── */
-      await new Promise((resolve) => setTimeout(resolve, 1800))
-      setStatus('success')
-    } catch {
-      setStatus('error')
-    }
-  }
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+      if (!executeRecaptcha) return
+      setStatus('submitting')
+      setErrorMsg('')
+
+      try {
+        const recaptchaToken = await executeRecaptcha('start_submit')
+        const res = await fetch('/api/start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...form, recaptchaToken }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error || 'Submission failed.')
+        setStatus('success')
+      } catch (err: unknown) {
+        setErrorMsg(err instanceof Error ? err.message : 'Transmission failed.')
+        setStatus('error')
+      }
+    },
+    [executeRecaptcha, form]
+  )
 
   /* ── Success ── */
   if (status === 'success') {
@@ -99,7 +115,7 @@ export default function ProjectRequestForm() {
         <div className="flex items-start gap-3 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3">
           <AlertCircle size={16} className="mt-0.5 shrink-0 text-red-400" />
           <p className="text-sm text-red-300">
-            Transmission failed. Please try again or contact us directly.
+            {errorMsg || 'Transmission failed. Please try again or contact us directly.'}
           </p>
         </div>
       )}
@@ -245,6 +261,12 @@ export default function ProjectRequestForm() {
           </>
         )}
       </button>
+
+      <p className="text-center text-[11px] text-zinc-700 leading-relaxed">
+        This site is protected by reCAPTCHA and the Google{' '}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-500">Privacy Policy</a>{' '}and{' '}
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-500">Terms of Service</a>{' '}apply.
+      </p>
     </form>
   )
 }

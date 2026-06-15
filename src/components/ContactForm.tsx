@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -44,6 +45,8 @@ const budgets = [
 export default function ContactForm() {
   const [form, setForm] = useState<FormData>(initialForm)
   const [status, setStatus] = useState<SubmitStatus>('idle')
+  const [errorMsg, setErrorMsg] = useState<string>('')
+  const { executeRecaptcha } = useGoogleReCaptcha()
 
   function handleChange(
     e: React.ChangeEvent<
@@ -53,18 +56,30 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setStatus('submitting')
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+      if (!executeRecaptcha) return
+      setStatus('submitting')
+      setErrorMsg('')
 
-    try {
-      /* ── Temporary stub: replace with real API call in Phase 4 ── */
-      await new Promise((resolve) => setTimeout(resolve, 1800))
-      setStatus('success')
-    } catch {
-      setStatus('error')
-    }
-  }
+      try {
+        const recaptchaToken = await executeRecaptcha('contact_submit')
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...form, recaptchaToken }),
+        })
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error || 'Submission failed.')
+        setStatus('success')
+      } catch (err: unknown) {
+        setErrorMsg(err instanceof Error ? err.message : 'Transmission failed.')
+        setStatus('error')
+      }
+    },
+    [executeRecaptcha, form]
+  )
 
   /* ── Success state ── */
   if (status === 'success') {
@@ -102,7 +117,7 @@ export default function ContactForm() {
         <div className="flex items-start gap-3 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3">
           <AlertCircle size={16} className="mt-0.5 shrink-0 text-red-400" />
           <p className="text-sm text-red-300">
-            Transmission failed. Please try again or email us directly.
+            {errorMsg || 'Transmission failed. Please try again or email us directly.'}
           </p>
         </div>
       )}
@@ -207,6 +222,12 @@ export default function ContactForm() {
 
       <p className="text-center text-xs text-zinc-700">
         No spam. No pressure. No generic discovery call. Just a direct, thoughtful response from our team.
+      </p>
+
+      <p className="text-center text-[11px] text-zinc-700 leading-relaxed">
+        This site is protected by reCAPTCHA and the Google{' '}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-500">Privacy Policy</a>{' '}and{' '}
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-500">Terms of Service</a>{' '}apply.
       </p>
     </form>
   )
