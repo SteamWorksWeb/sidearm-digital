@@ -284,15 +284,7 @@ export default function ServicesContent() {
                   className="flex items-center justify-center"
                 >
                   <div className="relative w-full max-w-sm aspect-square flex items-center justify-center rounded-3xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
-                    {/* Decorative glow */}
-                    <div
-                      aria-hidden="true"
-                      className="absolute inset-0"
-                      style={{
-                        background:
-                          'radial-gradient(circle at 50% 50%, rgba(59,130,246,0.08), transparent 70%)',
-                      }}
-                    />
+
                     {/* Large decorative number — top-left */}
                     <span
                       aria-hidden="true"
