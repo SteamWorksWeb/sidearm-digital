@@ -113,7 +113,7 @@ export default function About() {
                     href="/start"
                     className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-150"
                   >
-                    Start a Private Consultation &rarr;
+                    Get Started &rarr;
                   </a>
                 </p>
               </div>

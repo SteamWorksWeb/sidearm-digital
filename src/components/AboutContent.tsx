@@ -141,7 +141,7 @@ export default function AboutContent() {
                 href="/start"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40"
               >
-                Start a Private Consultation <ArrowRight size={15} />
+                Get Started <ArrowRight size={15} />
               </Link>
             </motion.div>
           </div>
