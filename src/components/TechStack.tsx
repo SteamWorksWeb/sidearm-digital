@@ -18,8 +18,12 @@ import {
   SiAndroid,
   SiSwift,
   SiKotlin,
+  SiN8N,
+  SiRender,
+  SiResend,
 } from 'react-icons/si'
 import { FaAws } from 'react-icons/fa'
+import { FaMicrosoft } from 'react-icons/fa6'
 import { type IconType } from 'react-icons'
 
 /* ─── data ─── */
@@ -41,14 +45,18 @@ const row1: Tech[] = [
 ]
 
 const row2: Tech[] = [
-  { icon: SiVercel,   label: 'Vercel' },
-  { icon: SiDocker,   label: 'Docker' },
-  { icon: SiStripe,   label: 'Stripe' },
-  { icon: SiFigma,    label: 'Figma' },
-  { icon: SiApple,    label: 'iOS / Apple' },
-  { icon: SiAndroid,  label: 'Android' },
-  { icon: SiSwift,    label: 'Swift' },
-  { icon: SiKotlin,   label: 'Kotlin' },
+  { icon: SiVercel,      label: 'Vercel' },
+  { icon: SiDocker,      label: 'Docker' },
+  { icon: SiStripe,      label: 'Stripe' },
+  { icon: SiFigma,       label: 'Figma' },
+  { icon: SiApple,       label: 'iOS / Apple' },
+  { icon: SiAndroid,     label: 'Android' },
+  { icon: SiSwift,       label: 'Swift' },
+  { icon: SiKotlin,      label: 'Kotlin' },
+  { icon: SiN8N,         label: 'n8n' },
+  { icon: FaMicrosoft,   label: 'Azure' },
+  { icon: SiRender,      label: 'Render' },
+  { icon: SiResend,      label: 'Resend' },
 ]
 
 /* ─── sub-components ─── */
