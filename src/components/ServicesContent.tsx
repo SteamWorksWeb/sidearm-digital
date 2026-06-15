@@ -293,15 +293,15 @@ export default function ServicesContent() {
                           'radial-gradient(circle at 50% 50%, rgba(59,130,246,0.08), transparent 70%)',
                       }}
                     />
-                    {/* Large decorative number */}
+                    {/* Large decorative number — top-left */}
                     <span
                       aria-hidden="true"
-                      className="absolute text-[10rem] font-black text-zinc-800/60 leading-none select-none tabular-nums"
+                      className="absolute top-5 left-6 text-[8rem] font-black text-zinc-800/60 leading-none select-none tabular-nums"
                     >
                       {service.number}
                     </span>
-                    {/* Icon */}
-                    <div className="relative z-10 h-24 w-24 rounded-2xl border border-zinc-700 bg-zinc-800/80 flex items-center justify-center shadow-2xl">
+                    {/* Icon — bottom-right */}
+                    <div className="absolute bottom-5 right-5 h-24 w-24 rounded-2xl border border-zinc-700 bg-zinc-800/80 flex items-center justify-center shadow-2xl">
                       <Icon size={44} className="text-blue-400" />
                     </div>
                   </div>
