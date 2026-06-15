@@ -14,21 +14,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sidearmdigital.com"),
-  title: "Sidearm Digital | High-Performance Web Applications",
+  title: "Sidearm Digital | Premium Digital Engineering",
   description:
-    "Premium, lightning-fast web applications and marketing sites. Custom-coded. Zero templates. Fully managed.",
+    "Built for industry leaders who expect excellence. Custom websites, applications, and automations — precision-engineered, white-glove service from start to finish.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
-    title: "Sidearm Digital | High-Performance Web Applications",
+    title: "Sidearm Digital | Premium Digital Engineering",
     description:
-      "We build high-caliber, lightning-fast digital solutions that hit the mark. No boilerplate. Just pure performance.",
+      "Built for industry leaders who expect excellence. Custom websites, applications, and automations — precision-engineered, white-glove service from start to finish.",
     url: "https://sidearmdigital.com",
     siteName: "Sidearm Digital",
     images: [
       {
-        url: "/sidearmLogo.png",
+        url: "/social.jpg",
         width: 1200,
         height: 630,
-        alt: "Sidearm Digital — High-Performance Web Applications",
+        alt: "Sidearm Digital — Premium Digital Engineering",
       },
     ],
     locale: "en_US",
@@ -36,10 +41,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sidearm Digital | High-Performance Web Applications",
+    title: "Sidearm Digital | Premium Digital Engineering",
     description:
-      "We build high-caliber, lightning-fast digital solutions that hit the mark. No boilerplate. Just pure performance.",
-    images: ["/sidearmLogo.png"],
+      "Built for industry leaders who expect excellence. Custom websites, applications, and automations — precision-engineered, white-glove service from start to finish.",
+    images: ["/social.jpg"],
   },
 };
 
