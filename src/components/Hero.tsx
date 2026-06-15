@@ -14,7 +14,7 @@ const fadeUp: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-[104px] text-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-[104px] pb-[180px] text-center overflow-hidden">
       {/* Subtle radial glow backdrop */}
       <div
         aria-hidden="true"
