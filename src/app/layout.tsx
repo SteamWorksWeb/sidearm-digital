@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   description:
     "Built for industry leaders who expect excellence. Custom websites, applications, and automations — precision-engineered, white-glove service from start to finish.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
