@@ -55,7 +55,7 @@ export default function Hero() {
           custom={0.1}
           className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white"
         >
-          Built for Brands That{' '}
+          Built for Industry Leaders Who{' '}
           <span
             className="bg-clip-text text-transparent"
             style={{
