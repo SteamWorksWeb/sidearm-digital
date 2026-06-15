@@ -10,7 +10,6 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiPrisma,
-  SiCloudflare,
   SiVercel,
   SiDocker,
   SiStripe,
@@ -20,6 +19,7 @@ import {
   SiSwift,
   SiKotlin,
 } from 'react-icons/si'
+import { FaAws } from 'react-icons/fa'
 import { type IconType } from 'react-icons'
 
 /* ─── data ─── */
@@ -37,7 +37,7 @@ const row1: Tech[] = [
   { icon: SiNodedotjs,   label: 'Node.js' },
   { icon: SiPostgresql,  label: 'PostgreSQL' },
   { icon: SiPrisma,      label: 'Prisma' },
-  { icon: SiCloudflare,  label: 'Cloudflare' },
+  { icon: FaAws,        label: 'AWS' },
 ]
 
 const row2: Tech[] = [
