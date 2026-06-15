@@ -42,7 +42,7 @@ export default function CallToAction() {
 
           {/* Headline */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-zinc-50 leading-[1.05] tracking-tight max-w-3xl">
-            Ready to Build a Digital Presence{' '}
+            Ready for a Digital Partner Who{' '}
             <span
               className="bg-clip-text text-transparent"
               style={{
@@ -50,15 +50,16 @@ export default function CallToAction() {
                   'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
               }}
             >
-              Worthy of Your Brand?
+              Executes at a Higher Standard?
             </span>
           </h2>
 
           {/* Body */}
           <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl">
-            If your business is ready for a polished, high-performance digital
-            presence with a process built around clarity and care, let&apos;s
-            begin the conversation.
+            For firms, practices, and service professionals who value precision,
+            quality, and clear communication, Sidearm Digital builds polished
+            digital systems with careful execution and white-glove support from
+            start to finish.
           </p>
 
           {/* Buttons */}
@@ -68,7 +69,7 @@ export default function CallToAction() {
               href="/start"
               className="px-8 py-3.5 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40"
             >
-              Start a Private Consultation →
+              Get Started →
             </Link>
             <Link
               id="cta-secondary"
