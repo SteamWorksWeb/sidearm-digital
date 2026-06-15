@@ -4,6 +4,7 @@ import Services from '@/components/Services'
 import Process from '@/components/Process'
 import About from '@/components/About'
 import TechStack from '@/components/TechStack'
+import CallToAction from '@/components/CallToAction'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Process />
         <About />
         <TechStack />
+        <CallToAction />
         <Footer />
       </div>
     </main>
