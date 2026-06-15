@@ -52,22 +52,15 @@ export function contactInternalEmail(data: {
 <table width="100%" cellpadding="0" cellspacing="0" style="${s.wrapper}">
   <tr><td align="center">
     <table width="600" cellpadding="0" cellspacing="0" style="${s.card}">
-
-      <!-- Header -->
       <tr><td style="${s.headerCell}">
         <img src="${LOGO_URL}" alt="Sidearm Digital" width="150" height="auto" style="display:block;margin:0 auto;max-width:150px">
       </td></tr>
-
-      <!-- Alert bar -->
       <tr><td style="${s.alertCell}">
         <p style="margin:0;color:#93c5fd;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">⚡ &nbsp;New Inquiry — Contact Form</p>
       </td></tr>
-
-      <!-- Body -->
       <tr><td style="${s.bodyCell}">
         <h1 style="${s.h1}">New Contact Submission</h1>
         <p style="${s.subtitle}">Received via sidearmdigital.com/contact</p>
-
         <table width="100%" cellpadding="0" cellspacing="0">
           ${field('Full Name', data.name)}
           ${field('Email Address', `<a href="mailto:${data.email}" style="color:#60a5fa;text-decoration:none">${data.email}</a>`)}
@@ -76,21 +69,13 @@ export function contactInternalEmail(data: {
           ${field('Estimated Budget', data.budget)}
           ${field('Project Details', data.details.replace(/\n/g, '<br>'), true)}
         </table>
-
         <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:36px">
-          <tr>
-            <td>
-              <a href="mailto:${data.email}" style="${s.btn}">Reply to ${data.name} &rarr;</a>
-            </td>
-          </tr>
+          <tr><td><a href="mailto:${data.email}" style="${s.btn}">Reply to ${data.name} &rarr;</a></td></tr>
         </table>
       </td></tr>
-
-      <!-- Footer -->
       <tr><td style="${s.footerCell}">
         <p style="${s.footerText}">Automated notification &bull; <a href="${SITE_URL}" style="${s.footerLink}">sidearmdigital.com</a></p>
       </td></tr>
-
     </table>
   </td></tr>
 </table>
@@ -113,25 +98,17 @@ export function contactConfirmationEmail(data: { name: string; projectType: stri
 <table width="100%" cellpadding="0" cellspacing="0" style="${s.wrapper}">
   <tr><td align="center">
     <table width="600" cellpadding="0" cellspacing="0" style="${s.card}">
-
-      <!-- Header -->
       <tr><td style="${s.headerCell}">
         <img src="${LOGO_URL}" alt="Sidearm Digital" width="150" height="auto" style="display:block;margin:0 auto;max-width:150px">
       </td></tr>
-
-      <!-- Alert bar -->
       <tr><td style="background:linear-gradient(135deg,#14532d,#166534);padding:14px 40px;border-bottom:1px solid #15803d">
         <p style="margin:0;color:#86efac;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">✓ &nbsp;Inquiry Received</p>
       </td></tr>
-
-      <!-- Body -->
       <tr><td style="${s.bodyCell}">
         <h1 style="${s.h1}">Thank you, ${firstName}.</h1>
         <p style="margin:0 0 24px;color:#a1a1aa;font-size:15px;line-height:1.7">
           We've received your inquiry about <strong style="color:#e4e4e7">${data.projectType}</strong> and a senior member of our team will review it personally.
         </p>
-
-        <!-- Expectation block -->
         <table width="100%" cellpadding="0" cellspacing="0" style="background:#09090b;border:1px solid #27272a;border-radius:8px;margin:0 0 32px">
           <tr><td style="padding:24px 28px">
             <p style="margin:0 0 16px;color:#60a5fa;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">What happens next</p>
@@ -151,28 +128,19 @@ export function contactConfirmationEmail(data: { name: string; projectType: stri
             </table>
           </td></tr>
         </table>
-
         <p style="margin:0 0 28px;color:#52525b;font-size:13px;line-height:1.6">
           If your inquiry is time-sensitive, reply directly to this email or reach us at <a href="mailto:info@sidearmdigital.com" style="color:#60a5fa;text-decoration:none">info@sidearmdigital.com</a>.
         </p>
-
         <table width="100%" cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-              <a href="${SITE_URL}/services" style="${s.btn}">View Our Services &rarr;</a>
-            </td>
-          </tr>
+          <tr><td><a href="${SITE_URL}/services" style="${s.btn}">View Our Services &rarr;</a></td></tr>
         </table>
       </td></tr>
-
-      <!-- Footer -->
       <tr><td style="${s.footerCell}">
         <p style="${s.footerText}">
           Sidearm Digital &bull; <a href="${SITE_URL}" style="${s.footerLink}">sidearmdigital.com</a><br>
           <span style="color:#27272a">You're receiving this because you submitted an inquiry on our website.</span>
         </p>
       </td></tr>
-
     </table>
   </td></tr>
 </table>
@@ -192,9 +160,9 @@ export function startInternalEmail(data: {
   company: string
   phone: string
   projectType: string
+  hasWebsite: string
   budget: string
-  timeline: string
-  scope: string
+  details: string
 }) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -203,47 +171,32 @@ export function startInternalEmail(data: {
 <table width="100%" cellpadding="0" cellspacing="0" style="${s.wrapper}">
   <tr><td align="center">
     <table width="600" cellpadding="0" cellspacing="0" style="${s.card}">
-
-      <!-- Header -->
       <tr><td style="${s.headerCell}">
         <img src="${LOGO_URL}" alt="Sidearm Digital" width="150" height="auto" style="display:block;margin:0 auto;max-width:150px">
       </td></tr>
-
-      <!-- Alert bar -->
       <tr><td style="${s.alertCell}">
         <p style="margin:0;color:#93c5fd;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">🚀 &nbsp;New Project Request — /start</p>
       </td></tr>
-
-      <!-- Body -->
       <tr><td style="${s.bodyCell}">
-        <h1 style="${s.h1}">New Project Scope Submitted</h1>
+        <h1 style="${s.h1}">New Project Request Submitted</h1>
         <p style="${s.subtitle}">Received via sidearmdigital.com/start</p>
-
         <table width="100%" cellpadding="0" cellspacing="0">
           ${field('Full Name', data.name)}
           ${field('Email Address', `<a href="mailto:${data.email}" style="color:#60a5fa;text-decoration:none">${data.email}</a>`)}
-          ${field('Company / Brand', data.company || 'Not provided')}
-          ${field('Phone', data.phone || 'Not provided')}
+          ${field('Phone', data.phone)}
+          ${field('Business Name', data.company || 'Not provided')}
           ${field('Project Type', data.projectType)}
-          ${field('Estimated Budget', data.budget)}
-          ${field('Target Timeline', data.timeline)}
-          ${field('Detailed Scope', data.scope.replace(/\n/g, '<br>'), true)}
+          ${field('Has Existing Website', data.hasWebsite)}
+          ${field('Expected Budget', data.budget)}
+          ${field('Additional Info', data.details ? data.details.replace(/\n/g, '<br>') : 'None provided', true)}
         </table>
-
         <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:36px">
-          <tr>
-            <td>
-              <a href="mailto:${data.email}" style="${s.btn}">Reply to ${data.name} &rarr;</a>
-            </td>
-          </tr>
+          <tr><td><a href="mailto:${data.email}" style="${s.btn}">Reply to ${data.name} &rarr;</a></td></tr>
         </table>
       </td></tr>
-
-      <!-- Footer -->
       <tr><td style="${s.footerCell}">
         <p style="${s.footerText}">Automated notification &bull; <a href="${SITE_URL}" style="${s.footerLink}">sidearmdigital.com</a></p>
       </td></tr>
-
     </table>
   </td></tr>
 </table>
@@ -257,37 +210,29 @@ export function startInternalEmail(data: {
    To:      submitter email
    ReplyTo: info@sidearmdigital.com
 ══════════════════════════════════════════════ */
-export function startConfirmationEmail(data: { name: string; projectType: string; budget: string; timeline: string }) {
+export function startConfirmationEmail(data: { name: string; projectType: string; budget: string }) {
   const firstName = data.name.split(' ')[0]
   return `<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your project scope is in review</title></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your project request is in review</title></head>
 <body style="${s.body}">
 <table width="100%" cellpadding="0" cellspacing="0" style="${s.wrapper}">
   <tr><td align="center">
     <table width="600" cellpadding="0" cellspacing="0" style="${s.card}">
-
-      <!-- Header -->
       <tr><td style="${s.headerCell}">
         <img src="${LOGO_URL}" alt="Sidearm Digital" width="150" height="auto" style="display:block;margin:0 auto;max-width:150px">
       </td></tr>
-
-      <!-- Alert bar -->
       <tr><td style="background:linear-gradient(135deg,#14532d,#166534);padding:14px 40px;border-bottom:1px solid #15803d">
-        <p style="margin:0;color:#86efac;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">✓ &nbsp;Scope Received — Under Review</p>
+        <p style="margin:0;color:#86efac;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase">✓ &nbsp;Request Received — Under Review</p>
       </td></tr>
-
-      <!-- Body -->
       <tr><td style="${s.bodyCell}">
-        <h1 style="${s.h1}">Your mission is in review, ${firstName}.</h1>
+        <h1 style="${s.h1}">Your request is in review, ${firstName}.</h1>
         <p style="margin:0 0 24px;color:#a1a1aa;font-size:15px;line-height:1.7">
-          We've received your project scope for <strong style="color:#e4e4e7">${data.projectType}</strong>. Our lead architect will review the full brief and respond with a direct, substantive reply — no call-center handoff.
+          We've received your project request for <strong style="color:#e4e4e7">${data.projectType}</strong>. Our lead architect will review it personally and reach out within 24 hours — no call-center handoff.
         </p>
-
-        <!-- Scope summary -->
         <table width="100%" cellpadding="0" cellspacing="0" style="background:#09090b;border:1px solid #27272a;border-radius:8px;margin:0 0 28px">
           <tr><td style="padding:20px 28px;border-bottom:1px solid #27272a">
-            <p style="margin:0;color:#60a5fa;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Submission Summary</p>
+            <p style="margin:0;color:#60a5fa;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Request Summary</p>
           </td></tr>
           <tr><td style="padding:20px 28px">
             <table width="100%" cellpadding="0" cellspacing="0">
@@ -299,26 +244,20 @@ export function startConfirmationEmail(data: { name: string; projectType: string
                 <td style="padding:6px 0"><p style="margin:0;color:#52525b;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Budget</p></td>
                 <td style="padding:6px 0"><p style="margin:0;color:#e4e4e7;font-size:13px">${data.budget}</p></td>
               </tr>
-              <tr>
-                <td style="padding:6px 0"><p style="margin:0;color:#52525b;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Timeline</p></td>
-                <td style="padding:6px 0"><p style="margin:0;color:#e4e4e7;font-size:13px">${data.timeline}</p></td>
-              </tr>
             </table>
           </td></tr>
         </table>
-
-        <!-- Next steps -->
         <table width="100%" cellpadding="0" cellspacing="0" style="background:#09090b;border:1px solid #27272a;border-radius:8px;margin:0 0 32px">
           <tr><td style="padding:24px 28px">
             <p style="margin:0 0 16px;color:#60a5fa;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">What happens next</p>
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td style="padding:8px 0;vertical-align:top;width:24px"><span style="color:#3b82f6;font-size:14px;font-weight:700">01</span></td>
-                <td style="padding:8px 0 8px 12px"><p style="margin:0;color:#a1a1aa;font-size:14px;line-height:1.5">Our lead architect reviews your scope in full — typically within <strong style="color:#e4e4e7">24 hours</strong>.</p></td>
+                <td style="padding:8px 0 8px 12px"><p style="margin:0;color:#a1a1aa;font-size:14px;line-height:1.5">Our lead architect reviews your request — typically within <strong style="color:#e4e4e7">24 hours</strong>.</p></td>
               </tr>
               <tr>
                 <td style="padding:8px 0;vertical-align:top;width:24px"><span style="color:#3b82f6;font-size:14px;font-weight:700">02</span></td>
-                <td style="padding:8px 0 8px 12px"><p style="margin:0;color:#a1a1aa;font-size:14px;line-height:1.5">You receive a direct response with preliminary architecture thoughts and next steps.</p></td>
+                <td style="padding:8px 0 8px 12px"><p style="margin:0;color:#a1a1aa;font-size:14px;line-height:1.5">You receive a direct response with preliminary thoughts and next steps.</p></td>
               </tr>
               <tr>
                 <td style="padding:8px 0;vertical-align:top;width:24px"><span style="color:#3b82f6;font-size:14px;font-weight:700">03</span></td>
@@ -327,28 +266,19 @@ export function startConfirmationEmail(data: { name: string; projectType: string
             </table>
           </td></tr>
         </table>
-
         <p style="margin:0 0 28px;color:#52525b;font-size:13px;line-height:1.6">
-          Questions in the meantime? Reply to this email or reach us directly at <a href="mailto:info@sidearmdigital.com" style="color:#60a5fa;text-decoration:none">info@sidearmdigital.com</a>.
+          Questions in the meantime? Reply to this email or reach us at <a href="mailto:info@sidearmdigital.com" style="color:#60a5fa;text-decoration:none">info@sidearmdigital.com</a>.
         </p>
-
         <table width="100%" cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-              <a href="${SITE_URL}/process" style="${s.btn}">View Our Process &rarr;</a>
-            </td>
-          </tr>
+          <tr><td><a href="${SITE_URL}/process" style="${s.btn}">View Our Process &rarr;</a></td></tr>
         </table>
       </td></tr>
-
-      <!-- Footer -->
       <tr><td style="${s.footerCell}">
         <p style="${s.footerText}">
           Sidearm Digital &bull; <a href="${SITE_URL}" style="${s.footerLink}">sidearmdigital.com</a><br>
-          <span style="color:#27272a">You're receiving this because you submitted a project scope on our website.</span>
+          <span style="color:#27272a">You're receiving this because you submitted a project request on our website.</span>
         </p>
       </td></tr>
-
     </table>
   </td></tr>
 </table>

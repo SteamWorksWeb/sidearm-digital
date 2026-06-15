@@ -7,42 +7,44 @@ import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error'
 
 type FormData = {
-  name: string
+  firstName: string
+  lastName: string
+  phone: string
   email: string
   company: string
-  phone: string
   projectType: string
+  hasWebsite: string
   budget: string
-  timeline: string
-  scope: string
+  details: string
 }
 
 const initial: FormData = {
-  name: '',
+  firstName: '',
+  lastName: '',
+  phone: '',
   email: '',
   company: '',
-  phone: '',
   projectType: '',
+  hasWebsite: '',
   budget: '',
-  timeline: '',
-  scope: '',
+  details: '',
 }
 
 const projectTypes = [
+  'Web Design',
   'Web Application',
   'Mobile App',
   'Automation / Integration',
   'Site Migration / Rebuild',
+  'Other',
 ]
 
-const budgets = ['$10k – $25k', '$25k – $50k', '$50k+']
-
-const timelines = [
-  'ASAP (under 4 weeks)',
-  '4 – 8 weeks',
-  '8 – 16 weeks',
-  '16+ weeks / Ongoing',
-  'Flexible — quality over speed',
+const budgets = [
+  'Under $10,000',
+  '$10,000 – $20,000',
+  '$20,000 – $50,000',
+  '$50,000 – $100,000',
+  '$100,000+',
 ]
 
 export default function ProjectRequestForm() {
@@ -120,15 +122,41 @@ export default function ProjectRequestForm() {
         </div>
       )}
 
-      {/* ── Row 1: Name + Email ── */}
+      {/* ── Row 1: First + Last Name ── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <InputField
-          id="prf-name"
-          label="Full Name"
-          name="name"
+          id="prf-firstName"
+          label="First Name"
+          name="firstName"
           type="text"
-          placeholder="Alex Johnson"
-          value={form.name}
+          placeholder="Alex"
+          value={form.firstName}
+          onChange={handleChange}
+          required
+          disabled={isSubmitting}
+        />
+        <InputField
+          id="prf-lastName"
+          label="Last Name"
+          name="lastName"
+          type="text"
+          placeholder="Johnson"
+          value={form.lastName}
+          onChange={handleChange}
+          required
+          disabled={isSubmitting}
+        />
+      </div>
+
+      {/* ── Row 2: Phone + Email ── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <InputField
+          id="prf-phone"
+          label="Phone"
+          name="phone"
+          type="tel"
+          placeholder="+1 (555) 000-0000"
+          value={form.phone}
           onChange={handleChange}
           required
           disabled={isSubmitting}
@@ -146,100 +174,89 @@ export default function ProjectRequestForm() {
         />
       </div>
 
-      {/* ── Row 2: Company + Phone ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <InputField
-          id="prf-company"
-          label="Company / Brand"
-          name="company"
-          type="text"
-          placeholder="Acme Corp"
-          value={form.company}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
-        <InputField
-          id="prf-phone"
-          label="Phone (optional)"
-          name="phone"
-          type="tel"
-          placeholder="+1 (555) 000-0000"
-          value={form.phone}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
-      </div>
-
-      {/* ── Row 3: Project Type + Budget ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <SelectField
-          id="prf-projectType"
-          label="Project Type"
-          name="projectType"
-          value={form.projectType}
-          onChange={handleChange}
-          options={projectTypes}
-          required
-          disabled={isSubmitting}
-        />
-        <SelectField
-          id="prf-budget"
-          label="Estimated Budget"
-          name="budget"
-          value={form.budget}
-          onChange={handleChange}
-          options={budgets}
-          required
-          disabled={isSubmitting}
-        />
-      </div>
-
-      {/* ── Row 4: Timeline (full width) ── */}
-      <SelectField
-        id="prf-timeline"
-        label="Target Timeline"
-        name="timeline"
-        value={form.timeline}
+      {/* ── Row 3: Company (full width) ── */}
+      <InputField
+        id="prf-company"
+        label="Business Name"
+        name="company"
+        type="text"
+        placeholder="Acme Corp"
+        value={form.company}
         onChange={handleChange}
-        options={timelines}
+        disabled={isSubmitting}
+      />
+
+      {/* ── Row 4: Project Type ── */}
+      <SelectField
+        id="prf-projectType"
+        label="What type of project are you looking for?"
+        name="projectType"
+        value={form.projectType}
+        onChange={handleChange}
+        options={projectTypes}
         required
         disabled={isSubmitting}
       />
 
-      {/* ── Row 5: Detailed scope textarea ── */}
-      <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="prf-scope"
-          className="text-xs font-semibold tracking-widest text-zinc-500 uppercase"
-        >
-          Detailed Scope{' '}
-          <span className="text-blue-500">*</span>
-        </label>
-        <textarea
-          id="prf-scope"
-          name="scope"
-          rows={6}
-          value={form.scope}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-          placeholder="Describe your project in as much detail as possible — current pain points, desired features, integrations needed, and what success looks like. The more detail, the faster we can architect a solution."
-          className="w-full resize-none rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-all duration-200 focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 disabled:opacity-50"
-        />
-        <p className="text-xs text-zinc-700 mt-0.5">
-          Minimum 50 characters recommended for accurate scoping.
+      {/* ── Row 5: Existing website radio ── */}
+      <div className="flex flex-col gap-2">
+        <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
+          Do you have a website now? <span className="text-blue-500">*</span>
         </p>
+        <div className="flex items-center gap-6">
+          {['Yes', 'No'].map((opt) => (
+            <label
+              key={opt}
+              className="flex items-center gap-2.5 cursor-pointer group"
+            >
+              <input
+                type="radio"
+                name="hasWebsite"
+                value={opt}
+                checked={form.hasWebsite === opt}
+                onChange={handleChange}
+                required
+                disabled={isSubmitting}
+                className="w-4 h-4 accent-blue-500 cursor-pointer"
+              />
+              <span className="text-sm text-zinc-300 group-hover:text-white transition-colors duration-150">
+                {opt}
+              </span>
+            </label>
+          ))}
+        </div>
       </div>
 
-      {/* ── Retainer notice ── */}
-      <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 px-4 py-3 text-xs text-zinc-500 leading-relaxed">
-        <span className="text-blue-400 font-semibold">Note:</span> All custom
-        builds require enrollment in our{' '}
-        <span className="text-zinc-300 font-medium">
-          Zero-Maintenance Retainer
-        </span>{' '}
-        post-launch to ensure peak performance and security. Your architect will
-        walk you through the options.
+      {/* ── Row 6: Budget ── */}
+      <SelectField
+        id="prf-budget"
+        label="What is your expected budget?"
+        name="budget"
+        value={form.budget}
+        onChange={handleChange}
+        options={budgets}
+        required
+        disabled={isSubmitting}
+      />
+
+      {/* ── Row 7: Project details ── */}
+      <div className="flex flex-col gap-1.5">
+        <label
+          htmlFor="prf-details"
+          className="text-xs font-semibold tracking-widest text-zinc-500 uppercase"
+        >
+          Any other info you&apos;d like to share about your project
+        </label>
+        <textarea
+          id="prf-details"
+          name="details"
+          rows={5}
+          value={form.details}
+          onChange={handleChange}
+          disabled={isSubmitting}
+          placeholder="Tell us about your goals, timeline, any specific features you need, or anything else that would help us understand your project…"
+          className="w-full resize-none rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-all duration-200 focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 disabled:opacity-50"
+        />
       </div>
 
       {/* ── Submit ── */}
@@ -247,20 +264,24 @@ export default function ProjectRequestForm() {
         id="project-request-submit"
         type="submit"
         disabled={isSubmitting}
-        className="flex items-center justify-center gap-2.5 w-full px-8 py-4 rounded-lg text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-200 shadow-lg shadow-blue-900/40 mt-1"
+        className="flex items-center justify-center gap-2.5 w-full px-8 py-4 rounded-lg text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-900/30 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 transition-all duration-200 shadow-lg shadow-blue-900/40 mt-1"
       >
         {isSubmitting ? (
           <>
             <Loader2 size={16} className="animate-spin" />
-            Transmitting Scope...
+            Transmitting...
           </>
         ) : (
           <>
             <Send size={15} />
-            Submit Scope for Review
+            Submit Request →
           </>
         )}
       </button>
+
+      <p className="text-center text-xs text-zinc-600">
+        We&apos;ll respond within 24 hours. No spam, ever.
+      </p>
 
       <p className="text-center text-[11px] text-zinc-700 leading-relaxed">
         This site is protected by reCAPTCHA and the Google{' '}
@@ -353,7 +374,7 @@ function SelectField({
         className="w-full rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-3 text-sm text-white outline-none transition-all duration-200 focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 disabled:opacity-50 appearance-none cursor-pointer"
       >
         <option value="" disabled>
-          Select...
+          Select an option…
         </option>
         {options.map((opt) => (
           <option key={opt} value={opt} className="bg-zinc-900">

@@ -17,10 +17,21 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, email, company, phone, projectType, budget, timeline, scope, recaptchaToken } = body
+    const {
+      firstName,
+      lastName,
+      phone,
+      email,
+      company,
+      projectType,
+      hasWebsite,
+      budget,
+      details,
+      recaptchaToken,
+    } = body
 
     // Validate required fields
-    if (!name || !email || !projectType || !budget || !timeline || !scope) {
+    if (!firstName || !lastName || !email || !phone || !projectType || !budget || !hasWebsite) {
       return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 })
     }
 
@@ -33,13 +44,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'reCAPTCHA verification failed.' }, { status: 400 })
     }
 
+    const name = `${firstName} ${lastName}`
+
     // Send internal notification to info@sidearmdigital.com
     await resend.emails.send({
       from: 'Sidearm Digital <no-reply@sidearmdigital.com>',
       to: 'info@sidearmdigital.com',
       replyTo: email,
       subject: `New Project Request — ${name} | ${projectType} | ${budget}`,
-      html: startInternalEmail({ name, email, company, phone, projectType, budget, timeline, scope }),
+      html: startInternalEmail({ name, email, company, phone, projectType, hasWebsite, budget, details }),
     })
 
     // Send confirmation to submitter
@@ -47,8 +60,8 @@ export async function POST(req: NextRequest) {
       from: 'Sidearm Digital <no-reply@sidearmdigital.com>',
       to: email,
       replyTo: 'info@sidearmdigital.com',
-      subject: `Your project scope is in review, ${name.split(' ')[0]}`,
-      html: startConfirmationEmail({ name, projectType, budget, timeline }),
+      subject: `Your project request is in review, ${firstName}`,
+      html: startConfirmationEmail({ name, projectType, budget }),
     })
 
     return NextResponse.json({ success: true })
