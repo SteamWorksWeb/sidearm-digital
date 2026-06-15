@@ -344,10 +344,10 @@ export default function ServicesContent() {
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
               <Link
-                href="/#comms"
+                href="/start"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40"
               >
-                Initiate Project <ArrowRight size={15} />
+                Get Started <ArrowRight size={15} />
               </Link>
               <Link
                 href="/about"
@@ -440,10 +440,10 @@ function RetainerHighlight() {
 
             <div className="pt-2">
               <Link
-                href="/#comms"
+                href="/start"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors duration-200 shadow-lg shadow-blue-900/40"
               >
-                Ask About the Retainer <ArrowRight size={15} />
+                Get Started <ArrowRight size={15} />
               </Link>
             </div>
           </div>
