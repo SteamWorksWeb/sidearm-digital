@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -15,24 +16,29 @@ const fadeUp: Variants = {
 export default function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-104px)] flex flex-col items-center justify-center px-6 text-center overflow-hidden">
-      {/* Subtle radial glow backdrop */}
+      {/* Background image */}
+      <Image
+        src="/hero1.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        aria-hidden="true"
+      />
+
+      {/* Dark overlay for readability */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-zinc-950/70"
+      />
+
+      {/* Subtle blue glow on top of image */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
         <div className="h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[120px]" />
       </div>
-
-      {/* Faint grid texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
 
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-6">
         {/* Eyebrow tag */}
@@ -73,9 +79,10 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0.2}
-          className="max-w-2xl text-lg sm:text-xl text-zinc-400 leading-relaxed"
+          className="max-w-2xl text-lg sm:text-xl text-zinc-300 leading-relaxed"
         >
-          We create custom websites, applications, and automations with refined design, fast performance, and high-touch service from start to finish.
+          We create custom websites, applications, and automations with refined
+          design, fast performance, and high-touch service from start to finish.
         </motion.p>
 
         {/* CTAs */}
@@ -97,13 +104,11 @@ export default function Hero() {
           <Link
             id="hero-cta-secondary"
             href="/process"
-            className="px-8 py-3.5 rounded-md text-sm font-bold text-zinc-300 border border-zinc-700 hover:border-blue-500/60 hover:text-white transition-all duration-200"
+            className="px-8 py-3.5 rounded-md text-sm font-bold text-zinc-200 border border-zinc-600 hover:border-blue-500/60 hover:text-white transition-all duration-200"
           >
             View Our Process
           </Link>
         </motion.div>
-
-
       </div>
 
       {/* Bottom fade */}
@@ -111,8 +116,7 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 left-0 right-0 h-32"
         style={{
-          background:
-            'linear-gradient(to bottom, transparent, rgb(9,9,11))',
+          background: 'linear-gradient(to bottom, transparent, rgb(9,9,11))',
         }}
       />
     </section>
