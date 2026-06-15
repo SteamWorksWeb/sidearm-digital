@@ -44,7 +44,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-blue-400 uppercase"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-          Premium Digital Engineering for Ambitious Brands
+          Premium Digital Engineering
         </motion.span>
 
         {/* Headline */}
@@ -55,7 +55,7 @@ export default function Hero() {
           custom={0.1}
           className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white"
         >
-          Exquisite Web Applications.{' '}
+          Built for Brands That{' '}
           <span
             className="bg-clip-text text-transparent"
             style={{
@@ -63,11 +63,8 @@ export default function Hero() {
                 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
             }}
           >
-            Engineered
+            Expect Excellence.
           </span>
-          {' '}for Performance.
-          <br />
-          Built for Brands That Refuse Ordinary.
         </motion.h1>
 
         {/* Subheadline */}
@@ -78,7 +75,7 @@ export default function Hero() {
           custom={0.2}
           className="max-w-2xl text-lg sm:text-xl text-zinc-400 leading-relaxed"
         >
-           Sidearm Digital creates custom-coded websites, applications, automations, and digital infrastructure for businesses that expect excellence at every touchpoint. No templates. No shortcuts. No disposable builds. Just refined digital systems designed to perform beautifully, load instantly, and support serious growth.
+          We create custom websites, applications, and automations with refined design, fast performance, and high-touch service from start to finish.
         </motion.p>
 
         {/* CTAs */}
@@ -106,16 +103,7 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Social proof strip */}
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.4}
-          className="mt-4 text-xs text-zinc-600 tracking-widest uppercase"
-        >
-           Built for founders, operators, and premium brands that demand speed, polish, and reliability.
-        </motion.p>
+
       </div>
 
       {/* Bottom fade */}
