@@ -60,7 +60,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0.1}
-          className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white"
+          className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white"
         >
           Built for Industry Leaders Who{' '}
           <span
@@ -80,7 +80,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           custom={0.2}
-          className="max-w-2xl text-lg sm:text-xl text-zinc-300 leading-relaxed"
+          className="max-w-2xl text-base sm:text-xl text-zinc-300 leading-relaxed"
         >
           We create custom websites, applications, and automations with refined
           design, fast performance, and high-touch service from start to finish.

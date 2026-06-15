@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+/* ── Mobile: prevent horizontal overflow ── */
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/*
+  Hide the reCAPTCHA badge.
+  Permitted per Google's guidelines when the disclosure
+  text is shown inline (which we do on all forms).
+*/
+.grecaptcha-badge {
+  visibility: hidden !important;
+}

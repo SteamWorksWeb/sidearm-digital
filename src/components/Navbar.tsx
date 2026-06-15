@@ -40,7 +40,7 @@ export default function Navbar() {
             width={280}
             height={80}
             priority
-            className="h-16 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+            className="h-10 sm:h-14 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
           />
         </Link>
 
