@@ -22,7 +22,8 @@ export default function Hero() {
         alt=""
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover"
+        style={{ objectPosition: 'center center' }}
         aria-hidden="true"
       />
 
