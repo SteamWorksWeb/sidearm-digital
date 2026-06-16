@@ -4,9 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const footerLinks = [
-  { label: 'Services', href: '/services' },
-  { label: 'Our Process', href: '/process' },
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Process', href: '/process' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -53,9 +54,29 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-zinc-700 sm:text-right text-center">
-            Built with Next.js · Deployed on Vercel
-          </p>
+          <div className="mt-6 flex flex-wrap justify-center sm:justify-end gap-x-4 gap-y-2">
+            <Link
+              href="/terms"
+              className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors duration-150"
+            >
+              Terms of Service
+            </Link>
+            <span className="text-xs text-zinc-800">·</span>
+            <Link
+              href="/privacy"
+              className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors duration-150"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+          <div className="mt-4 flex justify-center sm:justify-end">
+            <Link
+              href="/start"
+              className="px-4 py-2 rounded-md text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors duration-200 shadow-md shadow-blue-900/30"
+            >
+              Get Started
+            </Link>
+          </div>
         </nav>
       </div>
     </footer>
