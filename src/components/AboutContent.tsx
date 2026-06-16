@@ -41,10 +41,10 @@ const pillars = [
   },
   {
     icon: Layers,
-    title: 'Custom-Coded Performance.',
+    title: 'Bespoke System Architecture.',
     description:
-      'We build with clean, scalable architecture instead of relying on templates, bloated plugins, or fragile page-builder systems. The result is a faster, more stable, more flexible digital asset that can grow with your business.',
-    tag: 'Custom · Performance',
+      'We build custom web applications and automations using clean, scalable code. No rigid platforms or disconnected SaaS tools. Just tailored software that solves complex operational bottlenecks and drives efficiency.',
+    tag: 'Custom · Architecture',
   },
   {
     icon: ShieldCheck,
@@ -56,10 +56,10 @@ const pillars = [
 ]
 
 const evolution = [
-  { year: 'Early Foundation', label: 'WordPress & Shopify & Foundational Web Platforms', note: 'We mastered the systems that shaped the modern web and learned where they succeed and where they limit serious growth.' },
-  { year: 'Enterprise Experience', label: 'Complex CMS & Scaled Digital Systems', note: 'We developed the discipline required to support larger systems, more demanding use cases, and higher expectations.' },
-  { year: 'The Shift', label: 'Custom-Coded Architecture', note: 'We moved beyond template-based limitations and committed to clean, hand-coded digital builds designed for performance and longevity.' },
-  { year: 'Today', label: 'Premium Managed Digital Infrastructure', note: 'We build, host, secure, maintain, and improve digital systems for clients who want excellence without technical burden.' },
+  { year: 'Legacy Systems & Integrations', label: 'Legacy Systems & Integrations', note: 'We mastered the platforms that shaped the modern web and learned exactly where they limit serious operational scaling.' },
+  { year: 'Complex Data & Scaled APIs', label: 'Complex Data & Scaled APIs', note: 'We developed the discipline required to architect complex data pipelines, custom API integrations, and demanding use cases.' },
+  { year: 'Custom-Coded Software', label: 'Custom-Coded Software', note: 'We moved beyond out-of-the-box limitations and committed to clean, hand-coded web applications designed for absolute flexibility.' },
+  { year: 'White-Glove Digital Infrastructure', label: 'White-Glove Digital Infrastructure', note: 'We architect, host, secure, and maintain complex digital systems for clients who want operational excellence without the technical burden.' },
 ]
 
 /* ─── component ─── */
@@ -116,7 +116,7 @@ export default function AboutContent() {
                     'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
                 }}
               >
-                Exceptional Digital Outcomes.
+                Custom System Architecture.
               </span>
             </motion.h1>
 
@@ -127,7 +127,7 @@ export default function AboutContent() {
               custom={0.2}
               className="mt-6 text-xl text-zinc-400 leading-relaxed max-w-2xl"
             >
-              Sidearm Digital was built for businesses that want more than a website. We partner with founders, operators, and premium brands that need a digital presence capable of matching the quality of their service, the expectations of their clients, and the ambition of their growth.
+              Sidearm Digital was built for businesses that need more than a digital storefront. We partner with founders, operators, and premium brands that require bespoke web applications, seamless operational automations, and white-glove technical consulting to scale without friction.
             </motion.p>
 
             <motion.div
@@ -194,12 +194,12 @@ export default function AboutContent() {
                     'linear-gradient(135deg, #f87171 0%, #ef4444 100%)',
                 }}
               >
-                Ordinary Websites
+                Off-the-Shelf Software
               </span>{' '}
-              Fall Short.
+              Falls Short.
             </h2>
             <p className="mt-4 text-zinc-500 text-sm leading-relaxed max-w-sm">
-              Our team has spent decades working across WordPress, Shopify, enterprise CMS systems, application development, and custom digital infrastructure. We have seen what works, what breaks, what slows businesses down, and what quietly costs brands trust.
+              Our team has spent decades wrestling with rigid SaaS platforms, disconnected APIs, and enterprise CMS bloat. We have seen how out-of-the-box solutions force businesses to compromise their operations to fit the software. That experience shaped the Sidearm standard. We build custom applications, internal tools, and automated workflows designed around your exact operational needs. Web design is just the surface; we engineer the engines underneath.
             </p>
 
             {/* Evolution timeline */}
@@ -239,7 +239,7 @@ export default function AboutContent() {
             className="flex flex-col gap-8 text-zinc-400 text-lg leading-relaxed"
           >
             <p>
-              We do not build disposable websites. We build refined digital systems with clean architecture, premium design, and long-term maintainability in mind. Every project is created to serve your business now and support where you are going next.
+              We do not build disposable websites. We build refined digital systems with clean architecture, long-term maintainability, and operational precision in mind. Every project is created to eliminate friction, automate complexity, and give your business a technical edge that compounds over time.
             </p>
 
             {/* Pull quote */}
@@ -251,7 +251,7 @@ export default function AboutContent() {
                 &ldquo;
               </div>
               <p className="text-zinc-300 text-xl leading-relaxed font-medium italic">
-                A premium business deserves a digital presence that feels intentional, performs instantly, and reflects the quality of the brand behind it.
+                A premium business deserves infrastructure that adapts to its growth, performs instantly, and eliminates operational friction.
               </p>
             </blockquote>
 
