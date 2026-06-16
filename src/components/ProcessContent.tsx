@@ -43,123 +43,123 @@ const steps = [
     tag: 'Weeks 1–2',
     action: {
       heading: 'What we do',
-      body: 'We perform a full technical and conversion audit of your current digital footprint. Every page is profiled for load time, Core Web Vitals scores, and leaky conversion funnels. We map out the competitive landscape and benchmark your site against the two or three competitors you are actually losing deals to right now.',
+      body: 'We perform a deep operational audit — not just a surface-level website review. We examine your existing systems, identify API bottlenecks, legacy integration failures, and the exact operational friction quietly costing you money. We map the full technical landscape before committing to a single architectural decision.',
       bullets: [
-        'Lighthouse audit across all key pages',
-        'Competitor benchmark analysis',
-        'Conversion funnel mapping and drop-off analysis',
-        'Infrastructure review: hosting, CDN, database, DNS',
+        'Legacy system audit and integration dependency mapping',
+        'API bottleneck identification and throughput analysis',
+        'Operational workflow friction assessment',
+        'Infrastructure review: hosting, CDN, database architecture, DNS',
       ],
     },
     outcome: {
       heading: 'Why it protects you',
-      body: 'Most agencies skip this step and start designing before they understand your actual problem. That is how projects go three months over budget fixing issues that were knowable on day one. Our audit locks in a shared definition of success before a single line of code is written — which means no surprises later.',
-      highlight: 'You get clarity, not assumptions. Every build decision is grounded in data, not guesswork.',
+      body: 'Most vendors skip this step and start building before they understand the actual problem. That is how projects go three months over budget fixing issues that were knowable on day one. Our audit locks in a shared definition of success before a single line of code is written — which means no surprises later.',
+      highlight: 'You get clarity, not assumptions. Every architectural decision is grounded in operational data, not guesswork.',
     },
   },
   {
     number: '02',
     icon: Map,
-    title: 'Strategy',
+    title: 'System Architecture',
     tag: 'Weeks 2–3',
     action: {
       heading: 'What we do',
-      body: 'We architect the complete digital roadmap. This includes the technology stack selection, the hosting and deployment pipeline, the data flow between any third-party services, and the exact KPIs we will use to measure whether this build succeeded. Every decision is documented and signed off before we move.',
+      body: 'We map the data pipelines, define the database schemas, and architect the custom software stack before a single line of code is written. This includes technology stack selection, deployment pipeline design, third-party API contracts, and the exact performance benchmarks the system must hit.',
       bullets: [
-        'Technology stack selection and rationale',
+        'Data pipeline mapping and schema definition',
+        'Custom software stack selection and rationale',
         'Deployment pipeline architecture (CI/CD)',
-        'Third-party API dependency mapping',
-        'KPI definition and measurement framework',
+        'Third-party API contract and dependency specification',
       ],
     },
     outcome: {
       heading: 'Why it protects you',
-      body: 'Technology choices made under time pressure are the root cause of 80% of technical debt. By locking the strategy phase before development, we eliminate the costly mid-project pivot — where a team discovers six weeks in that their framework choice cannot handle the required feature set.',
-      highlight: 'Your stack is chosen for your specific growth trajectory, not because it was the fastest to scaffold.',
+      body: 'Technology choices made under time pressure are the root cause of 80% of technical debt. By locking the architecture before development, we eliminate the costly mid-project pivot — where a team discovers six weeks in that their framework cannot handle the required operational feature set.',
+      highlight: 'Your stack is chosen for your specific operational requirements, not because it was the fastest to scaffold.',
     },
   },
   {
     number: '03',
     icon: ClipboardList,
-    title: 'Planning',
+    title: 'Sprint Planning',
     tag: 'Week 3',
     action: {
       heading: 'What we do',
-      body: 'We translate the strategy into a granular, sprint-by-sprint project plan. Every deliverable is scoped, every dependency is mapped, and every risk is documented with a mitigation strategy. We issue a fixed-scope Statement of Work before a single line of code is written.',
+      body: 'We define precise engineering milestones, integration dependencies, and feature deliverables so you know exactly how the application will come to life. Every sprint is scoped, every dependency is mapped, and every risk is documented with a mitigation strategy. We issue a fixed-scope Statement of Work before a single line of code is written.',
       bullets: [
-        'Sprint-by-sprint delivery schedule',
+        'Sprint-by-sprint engineering milestone schedule',
+        'Integration dependency graph and sequencing',
         'Fixed-scope Statement of Work',
-        'Risk register with documented mitigations',
-        'Stakeholder sign-off on all deliverables',
+        'Risk register with documented mitigations and owner assignments',
       ],
     },
     outcome: {
       heading: 'Why it protects you',
-      body: 'Scope creep is not a development problem — it is a planning problem. When the scope is ambiguous, both sides lose. We lose margin. You lose predictability. A fixed-scope SOW means you know exactly what you are getting, when you are getting it, and what it costs. No exceptions.',
+      body: 'Scope creep is not a development problem — it is a planning problem. When scope is ambiguous, both sides lose. We lose margin. You lose predictability. A fixed-scope SOW means you know exactly what you are getting, when you are getting it, and what it costs. No exceptions.',
       highlight: 'You never receive an unexpected invoice. The price you sign is the price you pay.',
     },
   },
   {
     number: '04',
     icon: Code2,
-    title: 'Development',
+    title: 'Engineering',
     tag: 'Weeks 4–10',
     action: {
       heading: 'What we do',
-      body: 'Every component is hand-coded in Next.js with TypeScript. We use a component-first architecture, building a design system of reusable, performant building blocks before assembling the final pages. Every PR is peer-reviewed. Every merge triggers an automated Lighthouse CI run — if performance regresses, the build fails.',
+      body: 'We hand-code your bespoke application using strictly typed Next.js architecture. No off-the-shelf plugins, no fragile visual builders. Just pure, scalable software. Every component is peer-reviewed, every merge triggers automated performance and type-safety gates — if a regression is detected, the build fails before it ever reaches staging.',
       bullets: [
-        'Hand-coded Next.js with TypeScript — zero templates',
+        'Hand-coded Next.js with strict TypeScript — zero templates',
         'Component-first architecture with a shared design system',
-        'Automated Lighthouse CI on every pull request',
-        'Weekly staged builds deployed to a preview URL for your review',
+        'Automated performance and type-safety gates on every pull request',
+        'Weekly staged builds deployed to a preview URL for stakeholder review',
       ],
     },
     outcome: {
       heading: 'Why it protects you',
-      body: 'Template-based builds create invisible ceilings. The day you need a feature the template does not support, you hit a wall — and the agency charges you to work around their own shortcuts. Because we write every line ourselves, the codebase is fully owned, fully understood, and fully extensible by any competent Next.js engineer.',
+      body: 'Off-the-shelf builds create invisible operational ceilings. The day you need a feature the platform does not support, you hit a wall — and the vendor charges you to work around their own limitations. Because we write every line ourselves, the codebase is fully owned, fully understood, and fully extensible by any competent engineer.',
       highlight: 'You own clean, documented code. Not a black-box license you cannot take elsewhere.',
     },
   },
   {
     number: '05',
     icon: FlaskConical,
-    title: 'Testing',
+    title: 'Rigorous QA',
     tag: 'Weeks 10–11',
     action: {
       heading: 'What we do',
-      body: 'We run a full battery of performance, accessibility, and user experience validation before anything touches production. This includes Lighthouse audits on every key page (targeting 95+ across all categories), cross-browser QA on Chrome, Safari, Firefox, and Edge, full WCAG 2.1 AA accessibility compliance testing, and structured end-to-end user flow validation.',
+      body: 'We execute stress tests, evaluate API response times under simulated production load, and audit every security layer before anything touches production. This includes end-to-end integration testing across all critical workflows, cross-browser validation, and a full WCAG 2.1 AA accessibility compliance pass.',
       bullets: [
-        'Lighthouse 95+ target across Performance, SEO, Accessibility',
+        'Stress testing and API response time benchmarking under load',
+        'Security layer audit: authentication, data exposure, injection vectors',
         'Cross-browser QA: Chrome, Safari, Firefox, Edge',
-        'WCAG 2.1 AA accessibility audit',
-        'Full end-to-end user flow validation on all devices',
+        'Full end-to-end integration and user flow validation on all devices',
       ],
     },
     outcome: {
       heading: 'Why it protects you',
-      body: 'Every hour of QA prevents roughly ten hours of post-launch firefighting. A missed accessibility issue is a legal liability. A performance regression discovered after launch is a brand incident. We do not ship until every gate is cleared — because our reputation is attached to your load time.',
+      body: 'Every hour of QA prevents roughly ten hours of post-launch firefighting. A missed security vulnerability is a liability event. A performance regression discovered after launch is a brand incident. We do not ship until every gate is cleared — because our reputation is attached to your uptime.',
       highlight: 'You launch with confidence, not with a list of known issues to fix next sprint.',
     },
   },
   {
     number: '06',
     icon: Rocket,
-    title: 'Execution',
+    title: 'Deployment',
     tag: 'Week 12',
     action: {
       heading: 'What we do',
-      body: 'We deploy to Vercel\'s global edge network using a canary deployment strategy — traffic is gradually shifted from the old infrastructure to the new, allowing us to catch any production anomalies before they affect your full user base. DNS cutover is handled by us, SSL is provisioned automatically, and a full post-launch monitoring window is observed.',
+      body: 'We execute a zero-downtime deployment to global edge networks, managing DNS configuration, environment variables, secrets provisioning, and initial production monitoring. Traffic is gradually shifted from the old infrastructure to the new, allowing us to catch any production anomalies before they affect your full user base.',
       bullets: [
-        'Canary deployment via Vercel for zero-downtime cutover',
-        'DNS migration and SSL provisioning',
-        'Post-launch 72-hour intensive monitoring window',
-        'Full rollback plan documented and ready to execute',
+        'Zero-downtime canary deployment via global edge network',
+        'DNS migration, SSL provisioning, and environment variable management',
+        'Secrets and credentials provisioning across all environments',
+        'Post-launch 72-hour intensive production monitoring window',
       ],
     },
     outcome: {
       heading: 'Why it protects you',
-      body: 'A botched launch is not just a technical failure — it is a sales and brand event. Downtime during a major campaign, a broken checkout at peak traffic, an SSL error on a critical landing page. Our canary strategy means we see issues before your customers do, and our rollback plan means we can revert in under five minutes if we need to.',
-      highlight: 'Your launch is an event, not a gamble. We have a contingency for every failure mode.',
+      body: 'A botched deployment is not just a technical failure — it is a revenue and brand event. Downtime during a major campaign, a broken integration at peak load, an exposed environment variable on a critical endpoint. Our deployment strategy means we catch issues before your users do, and our rollback plan means we can revert in under five minutes.',
+      highlight: 'Your launch is a controlled operation, not a gamble. We have a contingency for every failure mode.',
     },
   },
 ]
@@ -204,16 +204,16 @@ export default function ProcessContent() {
             animate="show"
             className="text-5xl sm:text-6xl lg:text-[5.5rem] font-black leading-[1.05] tracking-tight text-white max-w-4xl"
           >
-            Engineering Without{' '}
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
-              }}
-            >
-              Guesswork.
-            </span>
+            A Rigorous{' '}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
+                }}
+              >
+                Engineering Lifecycle.
+              </span>
           </motion.h1>
 
           <motion.p
@@ -222,9 +222,9 @@ export default function ProcessContent() {
             animate="show"
             className="mt-6 text-xl text-zinc-400 leading-relaxed max-w-2xl"
           >
-            A systematic, battle-tested pipeline for delivering high-performance
-            digital assets. Zero templates. Zero scope creep. Absolute
-            precision.
+            A rigorous, engineering-led lifecycle designed to map complex
+            operational workflows, eliminate technical debt, and deploy bespoke
+            software that scales effortlessly.
           </motion.p>
         </div>
       </section>
@@ -366,7 +366,7 @@ export default function ProcessContent() {
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mt-1">
-                  Management & Support
+                  White-Glove Management
                 </h2>
               </div>
             </div>
@@ -379,12 +379,12 @@ export default function ProcessContent() {
                 </p>
                 <div className="flex flex-col gap-4 text-zinc-300 leading-relaxed">
                   <p>
-                    We do not hand you the keys to a fragile CMS and walk away.
-                    The Zero-Maintenance Retainer is a standing operational
-                    agreement: we host, secure, update, and maintain the
-                    codebase on an ongoing monthly basis. Every Vercel
-                    deployment, every Next.js version bump, every security patch
-                    — handled by the engineers who built it.
+                    The Zero-CMS Retainer in action. We monitor server logs,
+                    handle security patching, and manage database scaling so your
+                    infrastructure never becomes a bottleneck. Every Next.js
+                    version bump, every dependency update, every production
+                    incident — handled by the engineers who architected the
+                    system.
                   </p>
                   <ul className="flex flex-col gap-2.5 pt-1">
                     {[
