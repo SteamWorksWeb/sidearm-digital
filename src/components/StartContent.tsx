@@ -26,7 +26,6 @@ const qualifiers = [
   'You have a real budget and a real deadline.',
   'You want a partner, not a vendor who disappears after launch.',
   'You understand that performance is a revenue multiplier.',
-  'You are ready to hand the infrastructure to someone who owns it.',
 ]
 
 export default function StartContent() {

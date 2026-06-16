@@ -14,6 +14,7 @@ type FormData = {
   company: string
   projectType: string
   hasWebsite: string
+  websiteUrl: string
   budget: string
   details: string
 }
@@ -26,6 +27,7 @@ const initial: FormData = {
   company: '',
   projectType: '',
   hasWebsite: '',
+  websiteUrl: '',
   budget: '',
   details: '',
 }
@@ -227,7 +229,28 @@ export default function ProjectRequestForm() {
         </div>
       </div>
 
-      {/* ── Row 6: Budget ── */}
+      {/* ── Conditional: Current website URL ── */}
+      {form.hasWebsite === 'Yes' && (
+        <div className="flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
+          <label
+            htmlFor="prf-websiteUrl"
+            className="text-xs font-semibold tracking-widest text-zinc-500 uppercase"
+          >
+            Current Website URL <span className="text-blue-500">*</span>
+          </label>
+          <input
+            id="prf-websiteUrl"
+            name="websiteUrl"
+            type="url"
+            placeholder="https://yourwebsite.com"
+            value={form.websiteUrl}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="w-full rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-all duration-200 focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 disabled:opacity-50"
+          />
+        </div>
+      )}
       <SelectField
         id="prf-budget"
         label="What is your expected budget?"
