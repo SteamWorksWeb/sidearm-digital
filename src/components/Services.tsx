@@ -29,7 +29,7 @@ const services = [
     icon: <ServerCog size={28} className="text-blue-400" />,
     title: 'Hosting, Management & Ongoing Care',
     description:
-      'A premium website should never become a technical burden. We host, secure, monitor, update, and maintain your digital infrastructure so you can stay focused on your clients, your team, and your growth.',
+      'A premium website should never become a technical liability. We provide fully managed hosting, security, and maintenance so you never have to manage a backend again.',
     tag: '★ White-Glove Support',
     featured: true,
   },

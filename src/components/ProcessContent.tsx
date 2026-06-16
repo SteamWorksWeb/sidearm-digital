@@ -379,8 +379,10 @@ export default function ProcessContent() {
                 </p>
                 <div className="flex flex-col gap-4 text-zinc-300 leading-relaxed">
                   <p>
-                    The Zero-CMS Retainer in action. We monitor server logs,
-                    handle security patching, and manage database scaling so your
+                    We don’t hand you a complex system and walk away. Through
+                    our ongoing management partnership, we protect and optimize
+                    your digital foundation — monitoring server logs, handling
+                    security patching, and managing database scaling so your
                     infrastructure never becomes a bottleneck. Every Next.js
                     version bump, every dependency update, every production
                     incident — handled by the engineers who architected the

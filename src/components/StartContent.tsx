@@ -116,15 +116,15 @@ export default function StartContent() {
                   <ShieldCheck size={16} className="text-blue-400" />
                 </div>
                 <p className="text-sm font-bold text-white">
-                  Zero-Maintenance Retainer Required
+                  White-Glove Infrastructure Management
                 </p>
               </div>
               <p className="text-xs text-zinc-500 leading-relaxed">
-                All custom builds require enrollment in our Zero-Maintenance
-                Retainer post-launch. This ensures your site stays secure,
-                up-to-date, and performant — permanently. Your architect will
-                walk you through the pricing and options during the kickoff
-                call.
+                To guarantee peak performance and absolute security, our custom
+                builds are paired with an ongoing management partnership. We
+                handle the hosting, updates, and technical scaling so you can
+                focus entirely on your business. We will architect the exact
+                management structure during our consultation.
               </p>
             </div>
 

@@ -75,7 +75,7 @@ const services = [
       'Cross-platform: iOS and Android from one codebase',
       'Native-feel animations and transitions',
       'Offline capability and push notification integration',
-      'Seamless handoff to our Zero-Maintenance Retainer',
+      'Seamless handoff to our ongoing management partnership',
     ],
   },
   {
@@ -424,9 +424,10 @@ function RetainerHighlight() {
                 </span>
               </p>
               <p className="text-zinc-400">
-                This is not a support ticket system with a 48-hour SLA. This is
-                a standing agreement between your team and ours — a dedicated
-                technical partner who already knows your codebase inside out.
+                Our managed infrastructure model ensures your investment is
+                actively protected and continuously optimized long after launch.
+                We are not a ticket queue — we are a standing technical partner
+                who already knows your codebase inside out.
               </p>
             </div>
 
