@@ -11,7 +11,6 @@ type FormData = {
   email: string
   phone: string
   projectType: string
-  budget: string
   details: string
 }
 
@@ -20,7 +19,6 @@ const initialForm: FormData = {
   email: '',
   phone: '',
   projectType: '',
-  budget: '',
   details: '',
 }
 
@@ -33,14 +31,6 @@ const projectTypes = [
   'Consulting',
 ]
 
-const budgets = [
-  'Under $5k',
-  '$5k – $15k',
-  '$15k – $30k',
-  '$30k – $60k',
-  '$60k+',
-  'Let\'s discuss',
-]
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormData>(initialForm)
@@ -167,17 +157,6 @@ export default function ContactForm() {
           disabled={isSubmitting}
         />
       </div>
-
-      {/* Budget */}
-      <SelectField
-        label="Estimated Budget"
-        name="budget"
-        value={form.budget}
-        onChange={handleChange}
-        options={budgets}
-        required
-        disabled={isSubmitting}
-      />
 
       {/* Project details */}
       <div className="flex flex-col gap-1.5">
