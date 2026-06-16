@@ -41,7 +41,6 @@ export function contactInternalEmail(data: {
   name: string
   email: string
   phone: string
-  projectType: string
   details: string
 }) {
   return `<!DOCTYPE html>
@@ -64,7 +63,6 @@ export function contactInternalEmail(data: {
           ${field('Full Name', data.name)}
           ${field('Email Address', `<a href="mailto:${data.email}" style="color:#60a5fa;text-decoration:none">${data.email}</a>`)}
           ${field('Phone', data.phone || 'Not provided')}
-          ${field('Project Type', data.projectType)}
           ${field('Project Details', data.details.replace(/\n/g, '<br>'), true)}
         </table>
         <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:36px">
