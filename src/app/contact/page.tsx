@@ -4,13 +4,13 @@ import ContactContent from '@/components/ContactContent'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Initiate Project | Sidearm Digital',
+  title: 'Contact | Sidearm Digital',
   description:
-    'Stop burning capital on bloated templates. Let\'s architect a custom, high-performance solution.',
+    'Have a question or need technical guidance? Get in touch with our U.S.-based team. We respond to every message personally within 24 hours.',
   openGraph: {
-    title: 'Initiate Project | Sidearm Digital',
+    title: 'Contact | Sidearm Digital',
     description:
-      'Stop burning capital on bloated templates. Let\'s architect a custom, high-performance solution.',
+      'Have a question or need technical guidance? Get in touch with our U.S.-based team. We respond to every message personally within 24 hours.',
     url: 'https://sidearmdigital.com/contact',
     siteName: 'Sidearm Digital',
     images: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: '/sidearmLogo.png',
         width: 1200,
         height: 630,
-        alt: 'Sidearm Digital — Initiate Project',
+        alt: 'Sidearm Digital — Contact',
       },
     ],
     locale: 'en_US',
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Initiate Project | Sidearm Digital',
+    title: 'Contact | Sidearm Digital',
     description:
-      'Stop burning capital on bloated templates. Let\'s architect a custom, high-performance solution.',
+      'Have a question or need technical guidance? Get in touch with our U.S.-based team. We respond to every message personally within 24 hours.',
     images: ['/sidearmLogo.png'],
   },
 }

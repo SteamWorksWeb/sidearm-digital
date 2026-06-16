@@ -34,23 +34,23 @@ const fadeRight: Variants = {
 const trust = [
   {
     icon: Flag,
-    title: 'U.S.-Based Engineering',
-    body: 'Your project is handled by a domestic team with clear communication, aligned working hours, and direct accountability. No offshore handoffs.',
+    title: 'Direct Access',
+    body: 'Reach our U.S.-based team directly. No endless phone trees or offshore support desks.',
   },
   {
     icon: ShieldCheck,
-    title: 'Premium Managed Support',
-    body: 'We continue hosting, securing, monitoring, and improving your digital infrastructure after launch, so you are never left managing the technical burden alone.',
+    title: 'Technical Support',
+    body: 'Current client? We are actively monitoring your infrastructure, but you can always reach your lead architect here.',
   },
   {
     icon: Zap,
-    title: 'Performance-First Builds',
-    body: 'Every project is designed with speed, usability, stability, and conversion in mind from the very beginning.',
+    title: 'Partnerships',
+    body: 'Looking to collaborate? We are always open to strategic partnerships with aligned agencies and brands.',
   },
   {
     icon: Clock,
-    title: 'Personal Response',
-    body: 'Your submission is reviewed by a senior member of our team. No call-center handoff. No generic sales script. Just a thoughtful response.',
+    title: 'Clear Communication',
+    body: 'Expect a thoughtful, human response within 24 hours. No automated sales scripts.',
   },
 ]
 
@@ -86,10 +86,10 @@ export default function ContactContent() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-blue-400 uppercase mb-5">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-            Start the Conversation
+            Get in Touch
           </span>
           <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-black leading-[1.05] tracking-tight text-white max-w-3xl">
-            Let&apos;s Build a Digital Presence{' '}
+            We&apos;re Here{' '}
             <span
               className="bg-clip-text text-transparent"
               style={{
@@ -97,7 +97,7 @@ export default function ContactContent() {
                   'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
               }}
             >
-              Worthy of Your Brand.
+              to Help.
             </span>
           </h1>
         </motion.div>
@@ -114,10 +114,10 @@ export default function ContactContent() {
           >
             <div className="flex flex-col gap-5 text-zinc-400 text-lg leading-relaxed">
               <p>
-                We partner with businesses that value excellence, performance, and a polished client experience. If you are ready to elevate your website, application, automation, or digital infrastructure, share a few details below.
-              </p>
-              <p>
-                If the project is a fit, our team will respond personally.
+                Whether you have questions about our managed infrastructure, need
+                technical guidance, or just want to connect, our team is ready
+                to assist. Drop us a message and we will get back to you
+                promptly.
               </p>
             </div>
 
@@ -146,15 +146,7 @@ export default function ContactContent() {
               })}
             </div>
 
-            {/* Social proof strip */}
-            <div className="border-t border-zinc-800/60 pt-6 flex flex-col gap-1">
-              <p className="text-xs font-bold tracking-widest text-zinc-600 uppercase">
-                Built For
-              </p>
-              <p className="text-sm text-zinc-500">
-                Premium service businesses · SaaS founders · E-commerce brands · Professional firms · Private practices · Luxury operators · Growth-stage companies
-              </p>
-            </div>
+
           </motion.div>
 
           {/* Right — form */}
@@ -167,10 +159,10 @@ export default function ContactContent() {
           >
             <div className="mb-7">
               <h2 className="text-xl font-black text-white">
-                Project Inquiry
+                Have questions? We have answers.
               </h2>
               <p className="text-sm text-zinc-500 mt-1">
-                Tell us what you are looking to build, improve, or streamline. All fields marked <span className="text-blue-400">*</span> are required.
+                Fill out the form below and we will route your message to the right person on our team.
               </p>
             </div>
             <ContactForm />

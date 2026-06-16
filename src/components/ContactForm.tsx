@@ -10,7 +10,6 @@ type FormData = {
   name: string
   email: string
   phone: string
-  projectType: string
   details: string
 }
 
@@ -18,18 +17,9 @@ const initialForm: FormData = {
   name: '',
   email: '',
   phone: '',
-  projectType: '',
   details: '',
 }
 
-const projectTypes = [
-  'Web Application',
-  'Mobile Application',
-  'Automation / Integration',
-  'Web Design',
-  'Zero-Maintenance Retainer',
-  'Consulting',
-]
 
 
 export default function ContactForm() {
@@ -83,10 +73,10 @@ export default function ContactForm() {
             Transmission Received
           </p>
           <h3 className="text-2xl font-black text-white leading-tight mb-3">
-            We&apos;ve got your scope.
+            We've got your message.
           </h3>
           <p className="text-zinc-300 leading-relaxed max-w-sm">
-            Your submission has been received. A senior member of our team will review your inquiry and respond personally — no call-center handoff, no generic sales script.
+            Message received. Our team will be in touch shortly.
           </p>
         </div>
       </div>
@@ -136,27 +126,16 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Phone + Project Type */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <Field
-          label="Phone (optional)"
-          name="phone"
-          type="tel"
-          placeholder="+1 (555) 000-0000"
-          value={form.phone}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
-        <SelectField
-          label="Project Type"
-          name="projectType"
-          value={form.projectType}
-          onChange={handleChange}
-          options={projectTypes}
-          required
-          disabled={isSubmitting}
-        />
-      </div>
+      {/* Phone only — full width */}
+      <Field
+        label="Phone (optional)"
+        name="phone"
+        type="tel"
+        placeholder="+1 (555) 000-0000"
+        value={form.phone}
+        onChange={handleChange}
+        disabled={isSubmitting}
+      />
 
       {/* Project details */}
       <div className="flex flex-col gap-1.5">
@@ -164,7 +143,7 @@ export default function ContactForm() {
           htmlFor="details"
           className="text-xs font-semibold tracking-widest text-zinc-500 uppercase"
         >
-          Project Details <span className="text-blue-500">*</span>
+          How can we help? <span className="text-blue-500">*</span>
         </label>
         <textarea
           id="details"
@@ -194,7 +173,7 @@ export default function ContactForm() {
         ) : (
           <>
             <Send size={15} />
-            Submit Project Inquiry
+            Send Message
           </>
         )}
       </button>

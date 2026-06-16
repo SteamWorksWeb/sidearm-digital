@@ -87,7 +87,7 @@ export function contactInternalEmail(data: {
    To:      submitter email
    ReplyTo: info@sidearmdigital.com
 ══════════════════════════════════════════════ */
-export function contactConfirmationEmail(data: { name: string; projectType: string }) {
+export function contactConfirmationEmail(data: { name: string }) {
   const firstName = data.name.split(' ')[0]
   return `<!DOCTYPE html>
 <html lang="en">
@@ -105,7 +105,7 @@ export function contactConfirmationEmail(data: { name: string; projectType: stri
       <tr><td style="${s.bodyCell}">
         <h1 style="${s.h1}">Thank you, ${firstName}.</h1>
         <p style="margin:0 0 24px;color:#a1a1aa;font-size:15px;line-height:1.7">
-          We've received your inquiry about <strong style="color:#e4e4e7">${data.projectType}</strong> and a senior member of our team will review it personally.
+          We've received your message and a member of our team will respond personally.
         </p>
         <table width="100%" cellpadding="0" cellspacing="0" style="background:#09090b;border:1px solid #27272a;border-radius:8px;margin:0 0 32px">
           <tr><td style="padding:24px 28px">

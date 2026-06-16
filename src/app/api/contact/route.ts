@@ -16,10 +16,10 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     const body = await req.json()
-    const { name, email, phone, projectType, details, recaptchaToken } = body
+    const { name, email, phone, details, recaptchaToken } = body
 
     // Validate required fields
-    if (!name || !email || !projectType || !details) {
+    if (!name || !email || !details) {
       return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 })
     }
 
@@ -37,8 +37,8 @@ export async function POST(req: NextRequest) {
       from: 'Sidearm Digital <no-reply@sidearmdigital.com>',
       to: 'info@sidearmdigital.com',
       replyTo: email,
-      subject: `New Contact Inquiry — ${name} (${projectType})`,
-      html: contactInternalEmail({ name, email, phone, projectType, details }),
+      subject: `New Contact Inquiry — ${name}`,
+      html: contactInternalEmail({ name, email, phone, details }),
     })
 
     // Send confirmation to submitter
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
       to: email,
       replyTo: 'info@sidearmdigital.com',
       subject: `We received your inquiry, ${name.split(' ')[0]}`,
-      html: contactConfirmationEmail({ name, projectType }),
+      html: contactConfirmationEmail({ name }),
     })
 
     return NextResponse.json({ success: true })
