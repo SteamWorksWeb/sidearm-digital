@@ -204,7 +204,7 @@ export default function ProcessContent() {
             animate="show"
             className="text-5xl sm:text-6xl lg:text-[5.5rem] font-black leading-[1.05] tracking-tight text-white max-w-4xl"
           >
-            A Rigorous{' '}
+            Decades of Experience.{' '}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
@@ -212,19 +212,20 @@ export default function ProcessContent() {
                     'linear-gradient(135deg, #60a5fa 0%, #3b82f6 40%, #93c5fd 100%)',
                 }}
               >
-                Engineering Lifecycle.
+                A Proven Methodology.
               </span>
           </motion.h1>
-
           <motion.p
             variants={fadeUp}
             initial="hidden"
             animate="show"
             className="mt-6 text-xl text-zinc-400 leading-relaxed max-w-2xl"
           >
-            A rigorous, engineering-led lifecycle designed to map complex
-            operational workflows, eliminate technical debt, and deploy bespoke
-            software that scales effortlessly.
+            We do not experiment with your infrastructure. Our approach is
+            tried, tested, and refined over decades of custom software
+            engineering. We deploy bespoke, scalable digital assets using a
+            predictable framework that eliminates technical debt and operational
+            friction.
           </motion.p>
         </div>
       </section>
