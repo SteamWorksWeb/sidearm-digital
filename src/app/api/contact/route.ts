@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { contactInternalEmail, contactConfirmationEmail } from '@/lib/emails'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 async function verifyRecaptcha(token: string): Promise<boolean> {
   const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
@@ -15,6 +13,7 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 }
 
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     const body = await req.json()
     const { name, email, phone, projectType, budget, details, recaptchaToken } = body
