@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Sidearm Digital',
-  description: 'Read the Privacy Policy for Sidearm Digital web application development services.',
+  title: 'Privacy Policy | Sidearm Digital LLC',
+  description: 'Read the Privacy Policy for Sidearm Digital LLC web application development services.',
 }
 
 export default function PrivacyPage() {
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           {/* Intro */}
           <section>
             <p className="text-zinc-400">
-              Sidearm Digital (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage our services. Please read it carefully.
+              Sidearm Digital LLC (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage our services. Please read it carefully.
             </p>
           </section>
 

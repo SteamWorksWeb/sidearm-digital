@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Sidearm Digital',
-  description: 'Read the Terms of Service for Sidearm Digital web application development services.',
+  title: 'Terms of Service | Sidearm Digital LLC',
+  description: 'Read the Terms of Service for Sidearm Digital LLC web application development services.',
 }
 
 export default function TermsPage() {
@@ -33,7 +33,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">1. Agreement to Terms</h2>
             <p className="text-zinc-400">
-              By accessing or using the services provided by Sidearm Digital (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). If you do not agree to these Terms, please do not use our services. These Terms apply to all clients, visitors, and users who access or use our services.
+              By accessing or using the services provided by Sidearm Digital LLC (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). If you do not agree to these Terms, please do not use our services. These Terms apply to all clients, visitors, and users who access or use our services.
             </p>
           </section>
 
@@ -41,7 +41,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">2. Services</h2>
             <p className="text-zinc-400 mb-3">
-              Sidearm Digital provides custom web application development, design, and consulting services. The scope of services for each client is defined in a separate Statement of Work or project agreement signed by both parties.
+              Sidearm Digital LLC provides custom web application development, design, and consulting services. The scope of services for each client is defined in a separate Statement of Work or project agreement signed by both parties.
             </p>
             <p className="text-zinc-400">
               We reserve the right to modify, suspend, or discontinue any aspect of our services at any time, with reasonable notice where applicable.
@@ -95,7 +95,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">7. Limitation of Liability</h2>
             <p className="text-zinc-400 mb-3">
-              To the fullest extent permitted by law, Sidearm Digital shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services, even if we have been advised of the possibility of such damages.
+              To the fullest extent permitted by law, Sidearm Digital LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services, even if we have been advised of the possibility of such damages.
             </p>
             <p className="text-zinc-400">
               Our total liability for any claim arising under these Terms shall not exceed the total fees paid by you to us in the three (3) months preceding the event giving rise to the claim.
