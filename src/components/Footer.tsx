@@ -69,14 +69,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
           </div>
-          <div className="mt-4 flex justify-center sm:justify-end">
-            <Link
-              href="/start"
-              className="px-4 py-2 rounded-md text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors duration-200 shadow-md shadow-blue-900/30"
-            >
-              Get Started
-            </Link>
-          </div>
+
         </nav>
       </div>
     </footer>
